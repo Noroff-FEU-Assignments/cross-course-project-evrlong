@@ -1,1 +1,146 @@
-background-color: #f2f3f1;
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #CBD8E2;
+}
+
+
+header {
+    position: fixed ;
+    top: 0;
+    width: 100%;
+    height: 117px;
+    background: linear-gradient(#7E7E9B, #5B5B70);
+    color:rgb(121, 124, 128);
+    text-align:center;
+    box-shadow: 5px 10px 25px rgb(66, 66, 66);
+  
+}
+
+header h1 {
+    line-height: 100px;
+}
+
+
+.header__icon {
+  position: relative;
+    height: 22px;
+    width: 18px;
+    float: right;
+    top: 22px;
+    padding: 10px;
+    max-width: 2.5em;
+    max-height: 2.5em;
+    right: 22px;
+     
+}
+
+.header__icon:hover {
+  background-color: #659162;
+  background-size: 20%;
+  border-style: solid;
+  border: #659162;
+}
+
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 118px;
+    height: 5em;
+    width: 7em;
+}
+
+nav {
+    position: fixed;        
+    top: 117px;
+    left: 70%;
+    width: 30%;
+    background-color: #CBD8E2;
+    
+    
+}
+nav ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0;
+    display: flex;
+    box-shadow: 1px 10px 25px rgb(66, 66, 66);
+    
+}
+
+
+
+nav ul li {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    color: #ffffff; 
+    border-style: solid;
+    border-top-width: 0;
+    border-width: 1px 1px 1px 0px;
+    border-color: #ffffff;
+    font-family: inter, sans-serif;
+    font-size: 20px; 
+    text-shadow: -1px 5px 5px #0000003a;
+    
+  
+  }
+
+
+
+  .maincontent {
+    position:inherit ;
+    width: 100%;
+    height: 100%;
+    float: none;
+    margin-top: 117px; 
+    background-color: #5f758b;
+
+  }
+
+  .searchbar {
+    position: absolute;
+    left: 274px;
+    top: 46px;
+    width: 560px;
+    height: 35px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #659162;
+    font-family: inter, sans-serif;
+    text-shadow: -1px 5px 5px #0000003a;
+  }
+  
+  corner {
+    border-bottom-right-radius: 50px;
+
+  }
+
+  .navmenu:hover {
+    background-color: #a6acd8;
+    text-decoration: underline;
+  }
+
+  .icon__phone {
+    color: #8dbe8a;
+    background-color: #5f758b;
+  }
+
+  .maincontent__about {
+    color: #659162;
+    
+    width: 1080px;
+    height: 720px;
+  }
+
+  .bg2 {
+    background-color: #CBD8E2;
+    width: 95%;
+    height: 100%;
+
+  }
