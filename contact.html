@@ -8,43 +8,60 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
   <title>Home</title>
 </head>
 <body>
-  <header>
-    <h1> <input class="searchbar" type="text" placeholder="Search for game"></h1>
-    <div>
-      <img src="IMAGES\Iconsvg-png\Bag.png"class="header__icon">
-      <img src="IMAGES\Iconsvg-png\Profile.png"class="header__icon">
-    </div>
-    <img src="IMAGES\GameHub_Logo.png" class="logo">
-    
-  </header>
-  <nav>
-    <ul>
-      <li><a class=navmenu href="index.html">Home</a></li>
-      <li><a class=navmenu href="games.html">Games</a></li>
-      <li><a class=navmenu href="about.html">About</a></li>
-      <li><a class=navmenu class="corner" href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
- <div class="maincontent" style="overflow: scroll height:400px;">
-
-    <textarea id="message" name="message" rows="20" cols="40" placeholder="Skriv din melding"></textarea>
-    <input type="text" name="firstname" placeholder="First Name" />
-    <input type="text" name="firstname" placeholder="Last Name" />
-    <input type="text" name="firstname" placeholder="Email address" />
-    <input type="text" name="firstname" placeholder="Subject" />
-
-
-    <img src="IMAGES\Iconsvg-png\Vectorphone.png" class="icon__phone">
-    <img src="IMAGES\Iconsvg-png\email.png" class="icon__email">
-    <img src="IMAGES\Iconsvg-png\Component 1location1.png" class="icon__location">
- 
-    
-
+  <header> 
+    <img class="logo__header" src="IMAGES\GameHub_Logo.png" alt="Logo">
+    <input class="searchbar" type="text" placeholder="Search for game">
+    <img class="search__icon" src="IMAGES\Iconsvg-png\search.png" alt="search for a game">
+    <div class="menu__icon"><img src="IMAGES\Iconsvg-png\Menu.png" alt="Drop Menu"> 
   </div>
+  </header>
+ 
+
+
+
+
+  <div class="main__section_con">
+    <div class="info__section">
+    <h1>Contact us</h1>
+    <p>We're always happy to hear from our customers! If you have any questions, 
+      comments, or feedback, please don't hesitate to get in touch.</p>
+      <h2>Email</h2>
+      <p>Support@gamehub.com</p>
+      <h2>Phone</h2>
+      <p>(monday - friday 9am to 5pm)</p>
+      <h2>Location</h2>
+      <p>123 Main St, Suite 456, Anytown, USA 12345. </p>
+      <p>You can also find us on social media! Follow us on Twitter, Facebook, 
+        and Instagram for news, updates, and special offers.</p>
+
+      <h2> Contact form</h2>
+
+    </div>
+
+
+
+ <div class="form__section">
+   <div class="form__style">
+    <div class="half half_first"> <input type="text" name="firstname" placeholder="First Name" /> </div>
+   <div class="half"> <input type="text" name="Last name" placeholder="Last name" /> </div>
+  </div>
+   <div class="form__style"> <input type="text" name="email" placeholder="Email address" /> </div>
+   <div class="form__style"> <input type="text" name="Subject" placeholder="Subject" /> </div>
+   <div class="form__style">
+    <textarea id="message" name="message" rows="20" cols="40" placeholder="Text"></textarea>
+   </div> 
+<div class="button"> <input class="cta_send" type="button" value="Send"></div>
+
+ </div>
+</div>
+
+  <div class="menubar"> Menu bar</div>
   </body>
 </html>
 
