@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/style.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="js/script.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,11 +33,22 @@
     <div class="menu__profile">
       <a href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png"></a>
     </div>
-    <div class="menu__icon">
-        <img src="IMAGES\Iconsvg-png\Menu.png" alt="Drop Menu"> 
-    </div>
 </header>
 
+<div id="sidemenu">
+  <div class="button-side" onclick="show_hide()">
+    <span class="x_top"></span>
+    <span class="x_bottom"></span>
+    <span class="x_hide"></span>
+  </div>
+  
+<ul class="sidemenu_container">
+  <a href="index.html"><div class="topmenu_item_mob"><img src="IMAGES\Iconsvg-png\home.png">HOME</div></a>
+  <a href="games.html"><div class="topmenu_item_mob"><img src="IMAGES\Iconsvg-png\Games.png">GAMES</div></a>
+  <a href="about.html"><div class="topmenu_item_mob"><img src="IMAGES\Iconsvg-png\info.png">ABOUT</div></a>
+  <a href="contact.html"><div class="topmenu_item_mob"><img src="IMAGES\Iconsvg-png\phone.png">CONTACT</div></a>
+</ul>
+</div>
 
 <div class="topmenu_container">
   <a href="index.html"><div class="topmenu_item">HOME</div></a>
@@ -102,11 +114,22 @@
           <td class="text_right">FREE</td>
         </tr>
         <tr>
+          <td>
+        <span class="long_line"></span>
+
+        </td>
+        <td>
+          <span class="long_line"></span>
+          </td>
+        </tr>
+        <tr>
           <td class="text_left">TOTAL</td>
+        
           <td class="text_right">$12</td>
         </tr>
+      </div>
     </table>
-    <div class="long-line"></div>
+   
     </section>
 
   </div>
