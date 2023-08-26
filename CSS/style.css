@@ -4,7 +4,7 @@ body {
 height: fit-content;
 display: grid;
 grid-template-columns: 1fr;
-grid-template-rows: 73px 0.1fr 1fr;
+grid-template-rows: 73px 0.2fr 1fr;
 background-color: rgb(207, 202, 202);
 margin: 0;
 padding: 0;
@@ -159,6 +159,11 @@ footer {
 
 
 }
+
+.test123 {
+  height: 60vh;
+}
+
 
 .footer_mob {
 
