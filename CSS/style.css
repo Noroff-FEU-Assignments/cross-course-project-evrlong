@@ -478,6 +478,16 @@ margin: 30px 30px;
 display: flex;
 flex-wrap: wrap;
 margin: 20px 20px;
+
+}
+
+.game_card:hover {
+  background: linear-gradient(#FFFFFF, #D6EDCB);
+  border: solid;  
+  border-width: 1px;  
+  width: 148px;
+  height: 248px;
+  
 }
 
 .game_card h3 {
