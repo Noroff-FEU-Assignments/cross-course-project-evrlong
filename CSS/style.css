@@ -493,6 +493,7 @@ margin: 20px 20px;
 }
 .xxl_text,
 .xl_text {
+  max-width: fit-content;
   font-size: 60px;
   padding: 0px;
   margin: -20px -20px 0px 40px;
