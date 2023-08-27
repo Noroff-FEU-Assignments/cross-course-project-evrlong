@@ -480,6 +480,32 @@ flex-wrap: wrap;
 margin: 20px 20px;
 }
 
+.game_card h3 {
+  padding: 0px;
+  margin: 20px 0px 10px 5px;
+}
+
+.game_card h2 {
+  padding: 0px;
+  margin: 0px 0px 0px 5px;
+}
+
+.game_card .new_price {
+  color: #429750;
+  font-size: 15px;
+}
+
+
+
+
+.game_card img {
+  display: block;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
 
 .game_card {
 
