@@ -144,6 +144,7 @@ input {
 header { 
   background: linear-gradient(#7E7E9B, #5B5B70);
   position: sticky;
+  height: 73px;
   top: 0;
   box-shadow: 0px 5px 50px;
   z-index: 1;
