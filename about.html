@@ -6,33 +6,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/style.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="js/script.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@900&display=swap" rel="stylesheet">
-  <title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
+<title>Home</title>
 </head>
 <body>
   <header>
-    <h1> <input class="searchbar" type="text" placeholder="Search for game"></h1>
-    <div>
-      <img src="IMAGES\Iconsvg-png\Bag.png"class="header__icon">
-      <img src="IMAGES\Iconsvg-png\Profile.png"class="header__icon">
+    <div class="searchbox">
+      <form>
+        <input type="text" name="" placeholder="Search for game....">
+        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
     </div>
-    <img src="IMAGES\GameHub_Logo.png" class="logo">
+    <img class="logo__header" src="IMAGES\GameHub_Logo.png" alt="Logo">
+    <label for="search-toggle" class="search__icon">
+        <img src="IMAGES\Iconsvg-png\search.png" alt="search for a game">
+    </label>
+    <input type="checkbox" id="search-toggle">
+    <input class="searchbar" type="text" placeholder="Search for game">
+    <div class="menu__cart">
+      <a href="cart.html"><img src="IMAGES/Iconsvg-png/bag.png"></a>
+    </div>
+    <div class="menu__profile">
+      <a href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png"></a>
+    </div>
+</header>
+
+<div id="sidemenu">
+  <div class="button-side" onclick="show_hide()">
+    <span class="x_top"></span>
+    <span class="x_bottom"></span>
+    <span class="x_hide"></span>
+  </div>
+  
+<ul class="sidemenu_container">
+  <a href="index.html"><div class="topmenu_item_mob"><img src="IMAGES\Iconsvg-png\home.png">HOME</div></a>
+  <a href="games.html"><div class="topmenu_item_mob"><img src="IMAGES\Iconsvg-png\Games.png">GAMES</div></a>
+  <a href="about.html"><div class="topmenu_item_mob"><img src="IMAGES\Iconsvg-png\info.png">ABOUT</div></a>
+  <a href="contact.html"><div class="topmenu_item_mob"><img src="IMAGES\Iconsvg-png\phone.png">CONTACT</div></a>
+</ul>
+</div>
+
+<div class="topmenu_container">
+  <a href="index.html"><div class="topmenu_item">HOME</div></a>
+  <a href="games.html"><div class="topmenu_item">GAMES</div></a>
+  <a href="about.html"><div class="topmenu_item">ABOUT</div></a>
+  <a href="contact.html"><div class="topmenu_last">CONTACT</div></a>
+
+</div>
+
+
+   
     
-  </header>
-  <nav>
-    <ul>
-      <li><a class=navmenu href="index.html">Home</a></li>
-      <li><a class=navmenu href="games.html">Games</a></li>
-      <li><a class=navmenu href="about.html">About</a></li>
-      <li><a class="navmenu corner" href="contact.html">Contact</a></li>
-    </ul>
+    <section class="about__section">
+
+      <img class="logo_about" src="IMAGES\GameHub_Logo.png" alt="Logo">
+
+      <h2>About us</h2>
+
+    <p>Welcome to GameHub, your one-stop-shop for all your gaming needs! We are an online computer game store that is dedicated 
+      to providing gamers of all ages and levels with the latest and greatest games at affordable prices.</p>
+
+    <p>At GameHub, we are passionate about gaming, and we understand the importance of having access to a wide range of gaming products that are both affordable and high-quality. 
+      That's why we carefully curate our selection of games and games ensuring that we only offer products that we would be proud to use ourselves.</h3>
+      
+    <p>We pride ourselves on providing exceptional customer service, and we are committed to ensuring that every customer has a positive experience when shopping 
+      with us. Our team of experienced gaming experts is always on hand to provide advice and support, helping you to find the perfect game or 
+      accessory to suit your needs.</p>
+      
+    <p>At Gamehub, we believe that gaming is not just a hobby, but a way of life. We are committed to providing you with everything 
+      you need to enhance your gaming experience and take your gaming to the next level. So why wait? Browse our selection of games  
+      today and start gaming like a pro!</p>
+      
+      
+    </section>
+    
+  </div>
+
+  <div class="footer_mob">
+      <div class="footer_section_mob">
+        <h3>Company</h3>
+    <ul>About us</ul>
+    <ul>Media</ul>
+    <ul>Career</ul>
+      </div>
+      <div class="footer_section_mob">
+        <h3>Help</h3>
+    <ul>Support center</ul>
+    <ul>Customer refund</ul>
+      </div>
+      <div class="footer_section_mob">
+        <h3>Account</h3>
+    <ul>Profile</ul>
+    <ul>My account</ul>
+    <ul>Order history</ul>
+    </div>
+      <div class="footer_section_social">
+        <h3>Social Media</h3>
+   <a href="#"><i class="fab fa-facebook-f"></i></a>
+   <a href="#"><i class="fab fa-twitter"></i></a>
+   <a href="#"><i class="fab fa-instagram"></i></a>
+   <a href="#"><i class="fab fa-snapchat"></i></a>
+      </div>
+      <div class="footer_section_signup">
+        <h3>Sign up for special offers</h3>
+        <div>
+          <form>
+            <input type="text" name="" placeholder="Enter email">
+            <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <nav class="menubar">
+    <div class="menu_item1"><a href="sale.html"><img src="IMAGES\Iconsvg-png\sale-menu.png"></a></div>
+    <div class="menu_item2"><a href="index.html"><img src="IMAGES\Iconsvg-png\Home.png"></a></div> 
+    <div class="menu_item3"><a href="cart.html"><img src="IMAGES\Iconsvg-png\Bag.png"></a></div>
+    <div class="menu_item4"><a href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png"></a></div> 
   </nav>
 
- <div class="maincontent__about" style="overflow: scroll height:400px;">
-   <div class=""
+  <footer>
+    <div class="footer_left footer_container_desktop">
+      <div class="footer_section">
+        <h3>Sign up for special offers</h3>
+        <div>
+          <form>
+            <input type="text" name="" placeholder="Enter email">
+            <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer_section">
+        <h3>Company</h3>
+    <ul>About us</ul>
+    <ul>Media</ul>
+    <ul>Career</ul>
+      </div>
+      <div class="footer_section">
+        <h3>Help</h3>
+    <ul>Support center</ul>
+    <ul>Customer refund</ul>
+      </div>
+      <div class="footer_section">
+        <h3>Account</h3>
+    <ul>Profile</ul>
+    <ul>My account</ul>
+    <ul>Order history</ul>
+      </div>
+    </div>
+    <div class="footer_right">
+      <div class="footer_section footer_section_web">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+      </div>
+    </div>
+    
+      </footer>
 
-  </div>
+
+
+  
   </body>
 </html>
-

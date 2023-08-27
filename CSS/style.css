@@ -5,8 +5,6 @@ height: fit-content;
 min-height: 100vh;
 display: flex;
 flex-direction: column;
-grid-template-columns: 1fr;
-grid-template-rows:  1fr;
 background-color: rgb(207, 202, 202);
 margin: 0;
 padding: 0;
@@ -30,6 +28,7 @@ padding: 0;
 
 
 h1 {
+  
   color: #73738F;
   font-size: 30px;
 font-family: Roboto;
@@ -41,6 +40,7 @@ h2 {
 font-size: 25px;
 font-family: Roboto;
 font-weight: 700;
+
 }
 
 
@@ -163,11 +163,6 @@ footer {
 
 
 }
-
-.test123 {
-  height: 60vh;
-}
-
 
 .footer_mob {
 
@@ -392,20 +387,20 @@ header input {
 }
 
 
-
+/*
 .main__section {
   background-color: rgb(207, 202, 202);
   top: 0;
   height: auto;
-}
+}  */
 
+ 
 /* Profile*/ 
 
 .profile_h1 {
 font-size: 30px;
 font-family: Roboto;
 text-align: center;
-
 
 }
 
@@ -420,9 +415,6 @@ letter-spacing: 2px;
 .list__profile ul {
   padding: 10px;
 }
-
-
-
 .profile_png {
   display: block;
   margin: auto;
@@ -440,7 +432,6 @@ letter-spacing: 2px;
   box-shadow: 5px 5px 25px grey;
 }
 
-
 .profile_overlay {
 position: relative;
 padding: 0%;
@@ -452,6 +443,67 @@ flex-shrink: 0;
 border-radius: 60px 60px 0px 0px;
 box-shadow: 2px -2px 10px grey;
 }
+
+
+/* ------ About --------- */ 
+
+
+.logo_about {
+display: flex;
+width: 246px;
+height: 159px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+margin: 20px auto 60px auto;
+}
+
+.about__section h2 {
+  text-align: center;
+}
+
+.about__section p {
+  color: #4B4B4B;;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+margin: 30px 30px;
+}
+
+
+/* ------ Games ------ */
+
+.container__card {
+
+display: flex;
+flex-wrap: wrap;
+margin: 20px 20px;
+}
+
+
+.game_card {
+
+   margin: 20px;
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 5px 5px 25px grey;
+   width: 200px;
+   height: 300px;
+   flex-shrink: 0;
+}
+.xxl_text,
+.xl_text {
+  font-size: 60px;
+  padding: 0px;
+  margin: -20px -20px 0px 40px;
+
+}
+
+.xxl_text {
+  font-size: 80px;
+  margin-top: -20px;
+}
+
 
 /* Mobile*/ 
 
@@ -486,6 +538,8 @@ box-shadow: 2px -2px 10px grey;
   box-shadow: 5px 5px 25px grey;
  }
 
+
+.about__section,
  .white__section {
   top: 150px;
  min-width: 80%;

@@ -1,0 +1,21 @@
+
+Header - x
+Footer - x
+Meny  - X
+
+- index
+- contact - x 
+- games
+- about - x
+- cart
+- sale
+- profil - x
+
+- fonts 
+- hover/ani etc
+- cleanup code 
+- legge "alt=" til bilder
+- Meta sidenavn, description etc
+
+
+
