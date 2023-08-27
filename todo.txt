@@ -8,7 +8,7 @@ Meny  - X
 - games
 - about - x
 - cart
-- sale
+- sale / games
 - profil - x
 
 - fonts 
@@ -16,6 +16,7 @@ Meny  - X
 - cleanup code 
 - legge "alt=" til bilder
 - Meta sidenavn, description etc
+- link logo etc
 
 
 
