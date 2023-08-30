@@ -2,7 +2,6 @@
 
 body {
 height: fit-content;
-min-height: 100vh;
 display: flex;
 flex-direction: column;
 background-color: rgb(207, 202, 202);
