@@ -2,6 +2,7 @@
 
 body {
 height: fit-content;
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 background-color: rgb(207, 202, 202);
@@ -1016,7 +1017,12 @@ padding: 5px;
   /* Desktop*/
 
   @media only screen and (min-width: 600px) {
-   
+
+    body {
+    
+      min-height: 100vh;
+    
+    }
   
     .main__section, .main__section_cart {
     display: grid;
