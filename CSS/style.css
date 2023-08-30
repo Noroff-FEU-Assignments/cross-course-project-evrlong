@@ -13,6 +13,10 @@ padding: 0;
 
 /* Font style */
 
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 
 .topmenu_container >* {
@@ -493,16 +497,20 @@ margin: 20px 20px;
 .game_card h3 {
   padding: 0px;
   margin: 20px 0px 10px 5px;
+  
 }
 
 .game_card h2 {
   padding: 0px;
   margin: 0px 0px 0px 5px;
+  
+
 }
 
 .game_card .new_price {
   color: #429750;
   font-size: 15px;
+  
 }
 
 
