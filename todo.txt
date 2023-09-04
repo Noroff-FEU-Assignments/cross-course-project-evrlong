@@ -5,11 +5,13 @@ Meny  - X
 
 - index
 - contact - x 
-- games
+- games - x
 - about - x
-- cart
-- sale / games
+- cart -
+- sale / games -(x)
 - profil - x
+- checkout page - 
+- game info pages - x
 
 - fonts 
 - hover/ani etc
@@ -17,6 +19,7 @@ Meny  - X
 - legge "alt=" til bilder
 - Meta sidenavn, description etc
 - link logo etc
+- implentere back buttons
 
 
 

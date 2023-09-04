@@ -289,7 +289,7 @@ header input {
 
 
 .searchbox {
-  width: 50vh;
+  width: 50%;
   position: absolute;
   top: 30px;
   left: 190px;
@@ -389,12 +389,46 @@ header input {
 }
 
 
-/*
-.main__section {
-  background-color: rgb(207, 202, 202);
-  top: 0;
-  height: auto;
-}  */
+/* ------ index ------ */
+
+
+
+
+
+.index_container {
+  max-width: 90%; 
+  width: 100%;
+  margin: auto;
+  padding: 0px; 
+  text-align: center;
+}
+
+.index_container a {
+  display: inline-block; 
+  margin: auto; 
+  margin: 10px;
+
+}
+
+.index_container img {
+  width: 100%;
+  left: 200px;
+}
+
+.index_container a:hover {
+  background: linear-gradient(#FFFFFF, #D6EDCB);
+  border-width: 1px;  
+  box-shadow: 0 0 0 10px rgb(255, 255, 255);
+  transition: 0.2s;
+  -webkit-filter: saturate(1.5) brightness(90%);
+ 
+}
+
+
+
+
+
+
 
  
 /* Profile*/ 
@@ -480,16 +514,19 @@ margin: 30px 30px;
 display: flex;
 flex-wrap: wrap;
 margin: 20px 20px;
+}
 
+.container__card a {
+  margin-top: 70px;
+  margin: 20px;
 }
 
 .game_card:hover {
   background: linear-gradient(#FFFFFF, #D6EDCB);
-  border: solid;  
   border-width: 1px;  
-  width: 148px;
-  height: 248px;
-  
+  box-shadow: 2px 5px 20px rgb(89, 221, 28);
+  transition: 1s;
+ 
 }
 
 .game_card h3 {
@@ -522,17 +559,34 @@ margin: 20px 20px;
 
 }
 
+.add_cart {
+  background-color: #95C180;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  height: 25px;
+  border-radius: 0px 0px 10px 10px;
+  border:solid white;
+}
+
+.add_cart:hover {
+  background-color: #9583f7;
+  
+}
+
 
 .game_card {
 
-   margin: 20px;
+ 
    background-color: #ffffff;
    border-radius: 10px;
    box-shadow: 5px 5px 25px grey;
    width: 150px;
    height: 250px;
-   flex-shrink: 0;
+  
 }
+
+
 .xxl_text,
 .xl_text {
   max-width: 60%;
@@ -541,6 +595,8 @@ margin: 20px 20px;
   margin: -20px -20px 0px 40px;
 
 }
+
+
 
 .xxl_text {
   font-size: 80px;
@@ -838,11 +894,7 @@ padding: 5px;
 
 /*------------    Responsive Media Query     ----------------*/
 /* small mobile */
-/*
-@media(max-width: 574){
-  
- 
-}
+
 
 /* Mobile*/
 
@@ -862,12 +914,11 @@ padding: 5px;
 
 .game_card:hover {
   background: linear-gradient(#FFFFFF, #D6EDCB);
-  border: solid;  
-  border-width: 1px;  
-  width: 118px;
-  height: 228px;
+
   
 }
+
+
 
 }
 
@@ -1022,6 +1073,8 @@ padding: 5px;
       min-height: 100vh;
     
     }
+
+   
   
     .main__section, .main__section_cart {
     display: grid;
