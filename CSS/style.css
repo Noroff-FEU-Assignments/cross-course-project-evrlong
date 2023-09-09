@@ -100,6 +100,9 @@ text-decoration: line-through;
   line-height: normal;
 
  }
+
+
+
 .footer_mob h3,
  footer h3 {
   color: #FFF;
@@ -713,9 +716,10 @@ max-width: 100%;
   box-shadow: 5px 5px 25px grey;
  }
 
-
 .about__section,
  .white__section {
+  display: flex;
+  flex-direction: column;
   top: 150px;
  min-width: 80%;
  max-width: 80%;
@@ -725,10 +729,40 @@ max-width: 100%;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 5px 5px 25px grey;
- 
+color: #000;
+font-family: Roboto;
+
+
  }
 
+
+
  /* Cart page */
+
+
+ .button_complete {
+
+
+width: 70%;
+margin: 50px auto 20px  auto;
+height: 66px;
+flex-shrink: 0;
+background-color: #95C180;
+border: none;
+box-shadow: -2px 3px 4px rgb(94, 94, 94);
+color: #FFF;
+font-family: Roboto;
+font-size: 30px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+ }
+
+ .button_complete:hover {
+  border: solid;
+  border-color: white;
+ }
+
 
  .long_line {
 
@@ -742,11 +776,36 @@ max-width: 100%;
 .text_right {
   text-align: right;
   padding-right: 50px;
+  color: #000;
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .text_left {
   text-align: left;
+  color: #000;
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+  
 }
+
+.total {
+  font-size: 30px;
+  padding-top: 40px;
+}
+ /* korrigering farge cart*/
+.green {
+  color: #429750;
+  font-weight: 700;
+   }                   
+
 
 th {
 text-align: left;
@@ -935,7 +994,6 @@ padding: 5px;
 .main__section, .main__section_cart {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 300px;
    }
 
    #sidemenu {

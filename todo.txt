@@ -3,7 +3,7 @@ Header - x
 Footer - x
 Meny  - X
 
-- index
+- index - x
 - contact - x 
 - games - x
 - about - x
@@ -13,13 +13,14 @@ Meny  - X
 - checkout page - 
 - game info pages - x
 
+
+
 - fonts 
 - hover/ani etc
 - cleanup code 
 - legge "alt=" til bilder
 - Meta sidenavn, description etc
 - link logo etc
-- implentere back buttons
 
 
 
