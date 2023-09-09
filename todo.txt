@@ -7,7 +7,7 @@ Meny  - X
 - contact - x 
 - games - x
 - about - x
-- cart -
+- cart - x
 - sale / games -(x)
 - profil - x
 - checkout page - 
