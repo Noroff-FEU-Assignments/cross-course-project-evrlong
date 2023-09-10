@@ -8,17 +8,17 @@ Meny  - X
 - games - x
 - about - x
 - cart - x
-- sale / games -(x)
+- sale / games-x
 - profil - x
 - checkout page - 
 - game info pages - x
 
 
 
-- fonts 
-- hover/ani etc
+- fonts (x)
+- hover/ani etc (x)
 - cleanup code 
-- legge "alt=" til bilder
+- legge "alt=" til bilder (x)
 - Meta sidenavn, description etc
 - link logo etc
 

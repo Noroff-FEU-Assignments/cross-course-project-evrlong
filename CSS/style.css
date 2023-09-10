@@ -298,8 +298,8 @@ header input {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 5px 5px 9px black;
-    filter: drop-shadow(2px 2px 5px black);
+    
+    filter: drop-shadow(2px 2px 2px black);
         
   }
 
@@ -418,6 +418,7 @@ header input {
 .index_container {
   max-width: 90%; 
   margin: auto;
+  margin-top: 50px;
   padding: 0px; 
   text-align: center;
 }
@@ -452,6 +453,10 @@ header input {
  
 /* Profile*/ 
 
+.wrapper_profile {
+  max-width: 50%;
+}
+
 .profile_h1 {
 font-size: 30px;
 font-family: Roboto;
@@ -477,13 +482,13 @@ letter-spacing: 2px;
   
 }
 
-.profile_bg {
-  max-width: 80%;
+.wrapper_profile {
+  min-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
   padding: 0px;
   background-color: #EC93C3;
   border-radius: 10px;
-  z-index: 2;
   box-shadow: 5px 5px 25px grey;
 }
 
@@ -709,29 +714,65 @@ max-width: 100%;
   grid-template-rows: 300px;
    }
 
+ .info__section {
+ }
+
 
  .info__section > * {
+  padding: 5px;
   padding-left: 20px;
   padding-right: 20px;
  }
 
  .info__section h3 {
+  padding-top: 40px;
   margin-bottom: 0;
 }
 
 .info__section p {
+
   margin-top: 0;
 }
 
+.form__section h1 {
+  padding-bottom: 60px;
+  margin-left: 20px;
 
- .form__section {
+
+}
+
+
+
+ .contact_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   max-width: 80%;
   margin: 0 auto;
+  margin-top: 50px;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
-  z-index: 2;
   box-shadow: 5px 5px 25px grey;
+
+ }
+
+ .contact_icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 170px;
+ }
+
+ .contact_icons >* {
+  margin-bottom: 115px;
+ height: 27px;
+ width: 27px;
+  
+ }
+
+ .contact_icons img:nth-child(2) {
+  margin-bottom: 148px;
  }
 
 
@@ -744,7 +785,7 @@ max-width: 100%;
   min-width: 80%;
   max-width: 80%;
   height: fit-content;
-  margin: 20px auto 0px auto;
+  margin: 50px auto 0px auto;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -754,7 +795,10 @@ max-width: 100%;
 
 
  }
+ .about__section p {
+ padding: 0px 140px 20px 140px;
 
+ }
 
 
  /* Cart page */
@@ -1192,8 +1236,20 @@ padding: 5px;
     
     
    }
+   .contact_icons {
+    display: none;
+   }
   
 }
+
+@media only screen and (max-width: 1010px) {
+  .contact_icons {
+    display: none;
+   }
+  
+  
+}
+  
 
 
 
@@ -1249,6 +1305,13 @@ padding: 5px;
 
       .content3 {
         grid-column-start: span 3;  
+    }
+
+    .main__section_con {
+      display: flex;
+      flex-wrap: wrap;
+      
+
     }
 
 
