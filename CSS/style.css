@@ -536,7 +536,8 @@ margin: 30px 30px;
 
 display: flex;
 flex-wrap: wrap;
-margin: 20px 20px;
+margin: 50px auto;
+justify-content: center;
 }
 
 .container__card a {
@@ -1082,6 +1083,9 @@ padding: 5px;
  
 }
 
+
+
+
 .game_card:hover {
   background: linear-gradient(#FFFFFF, #D6EDCB);
 
@@ -1274,6 +1278,26 @@ padding: 5px;
       min-height: 100vh;
     
     }
+
+    .container__card {
+
+      display: flex;
+      flex-wrap: wrap;
+      margin: 50px auto;
+      justify-content:flex-start;
+      }
+
+      .game_card {
+        width: 220px;
+        height: 335px;
+      
+        }
+
+        .game_card img  {
+  
+          margin: 20px 22px 0px 22px;
+        
+        }
 
    
   
