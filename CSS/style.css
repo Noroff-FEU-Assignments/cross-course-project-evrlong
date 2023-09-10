@@ -453,9 +453,7 @@ header input {
  
 /* Profile*/ 
 
-.wrapper_profile {
-  max-width: 50%;
-}
+
 
 .profile_h1 {
 font-size: 30px;
@@ -486,6 +484,7 @@ letter-spacing: 2px;
   min-width: 80%;
   max-width: 70%;
   margin: 0 auto;
+  margin-top: 50px;
   padding: 0px;
   background-color: #EC93C3;
   border-radius: 10px;
