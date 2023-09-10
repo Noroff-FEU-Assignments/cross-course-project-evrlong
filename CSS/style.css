@@ -181,11 +181,13 @@ width: 100%;
 
 .footer_section_social a {
   font-size: 30px;
-  padding: 15px 0px 5px 0px;
+  padding: 0px 0px 0px 15px;
+  text-align: center;
+line-height: 28px;
 }
 
 .fab {
-  padding: 0px 20px 0px 0px;
+  padding: 0px 10px 0px 0px;
   color: #ffffff;
 }
 
@@ -202,6 +204,8 @@ width: 50%;
 .footer_section_signup {
   padding: 40px 0px 50px 0px;
 }
+
+
 
 
 .footer_left {
@@ -276,7 +280,7 @@ header input {
   align-items: center;
   justify-content: center;
 }
-
+.menu_item_active img,
 .menu_item1 img,
 .menu_item2 img,
 .menu_item3 img,
@@ -285,8 +289,21 @@ header input {
         height: 27px;
         width: auto;
         filter: drop-shadow(2px 2px 1px black);
+        
   
       }
+
+  .menu_item_active {
+    background-color: #95C180;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 9px black;
+    filter: drop-shadow(2px 2px 5px black);
+        
+  }
+
+
 
 /* ----------      Header      ----------- */
 
@@ -400,7 +417,6 @@ header input {
 
 .index_container {
   max-width: 90%; 
-  width: 100%;
   margin: auto;
   padding: 0px; 
   text-align: center;
@@ -544,6 +560,8 @@ margin: 20px 20px;
   
 
 }
+
+
 
 .game_card .new_price {
   color: #429750;
@@ -956,22 +974,34 @@ padding: 5px;
   right: 20px;
 
 }
-
-
+.topmenu_item_active_last,
+.topmenu_item_active,
 .topmenu_item, 
 .topmenu_last {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-color: #7E7E9B;
   background-color: #CBD8E2;
   margin: 0.4px;
   border: solid;
   border-width: 0.2px;
   padding: 2px;
 
-  
 }
+
+.topmenu_item_active {
+  filter: drop-shadow(2px 2px 1px black);
+  background-color: #95C180;
+ 
+}
+
+.topmenu_item_active_last {
+  filter: drop-shadow(2px 2px 1px black);
+  border-radius: 0px 0px 5px 0px;
+  background-color: #95C180;
+}
+
+
 
 
 
@@ -982,7 +1012,6 @@ padding: 5px;
 .topmenu_item:hover,
 .topmenu_last:hover{
   background-color: #95C180;
-  border-left: 10px solid;
   border-color: #ffffff;
 }
 
@@ -1199,9 +1228,7 @@ padding: 5px;
     }
 
     .topmenu_container {
-      align-items: flex-start;
       display: grid;
-      justify-content: flex-end;
       grid-template-columns:  1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
       position: sticky;
@@ -1209,7 +1236,7 @@ padding: 5px;
       left: 50%;
       top: 73px;
       height: 40px;
-      justify-self: end;
+      justify-self: start;
       z-index: 3;
     }
 
