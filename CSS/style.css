@@ -1217,7 +1217,7 @@ padding: 5px;
    }
 
    .gameinfo_section {
-    padding: 10px;
+    
    }
   .gameinfo__container,
    .gameinfo_img img {
@@ -1240,7 +1240,7 @@ padding: 5px;
    }
 
    .about__section p {
-    padding: 0px 10px 20px 10px;
+    padding: 0px 5px 20px 5px;
    
     }
   
@@ -1250,6 +1250,11 @@ padding: 5px;
   .contact_icons {
     display: none;
    }
+
+   .about__section p {
+    padding: 0px 50px 20px 50px;
+   
+    }
   
   
 }
