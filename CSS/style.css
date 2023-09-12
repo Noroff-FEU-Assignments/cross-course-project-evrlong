@@ -101,7 +101,11 @@ text-decoration: line-through;
 
  }
 
-
+.footer_mob li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  font-size: 9px;
+}
 
 .footer_mob h3,
  footer h3 {
