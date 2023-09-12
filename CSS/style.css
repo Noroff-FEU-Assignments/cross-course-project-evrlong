@@ -195,6 +195,16 @@ line-height: 28px;
   color: #ffffff;
 }
 
+.footer_section li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  font-size: 9px;
+
+}
+
+.footer_section h3 {
+  font-size: 11px;
+}
 
 .footer_section_social,
 .footer_section_signup,
