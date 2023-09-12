@@ -484,14 +484,17 @@ font-weight: 200;
 letter-spacing: 2px;
 }
 
-.list__profile ul {
-  padding: 10px;
-}
+
 .profile_png {
   display: block;
   margin: auto;
   padding-bottom: 40px;
   
+}
+
+.list__profile li {
+list-style-type: none;
+padding: 15px;
 }
 
 .wrapper_profile {
