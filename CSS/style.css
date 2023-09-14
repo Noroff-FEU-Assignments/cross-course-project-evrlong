@@ -57,10 +57,6 @@ h3 {
 
 }
 
-
-
-
-
 h4 {
   color: #000;
 font-family: Roboto;
@@ -130,7 +126,7 @@ line-height: 7px;
   font-size: 16px;
 }
 
-/* buttons */
+/*----- buttons -----*/
 
 .cta_send {
   display: inline-flex;
@@ -146,6 +142,55 @@ line-height: 7px;
   border-style: hidden;
   
 }
+
+.button_complete {
+
+
+  width: 70%;
+  margin: 50px auto 20px  auto;
+  height: 66px;
+  flex-shrink: 0;
+  background-color: #95C180;
+  border: none;
+  box-shadow: -2px 3px 4px rgb(94, 94, 94);
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 30px;
+  text-align: center;
+  line-height: 70px;
+   }
+  
+   .button_complete:hover {
+    background-color: #95C180;
+    border-width: 1px;  
+    box-shadow: 0 0 0 4px #c5c6ff;
+    transition: 0.2s;
+   }
+
+
+   .success__button_sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+    
+   }
+  
+   .success_btn {
+    background-color: #CBD8E2;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    width: 160px;
+    height: 25px;
+    padding: 4px 16px 3px 17px;
+    justify-content: center;
+    align-items: center;
+   }
+  
+   .success_btn:hover {
+  background-color: #95C180;
+  
+   }
 
 /* Static */
 
@@ -198,12 +243,13 @@ line-height: 28px;
 .footer_section li {
   list-style-type: none;
   margin-bottom: 10px;
-  font-size: 9px;
+  font-size: 12px;
+  font-weight: 200;
 
 }
 
 .footer_section h3 {
-  font-size: 11px;
+  font-size: 17px;
 }
 
 .footer_section_social,
@@ -425,10 +471,6 @@ header input {
 
 /* ------ index ------ */
 
-
-
-
-
 .index_container {
   max-width: 90%; 
   margin: auto;
@@ -457,12 +499,6 @@ header input {
   filter: saturate(1.5) brightness(90%);
  
 }
-
-
-
-
-
-
 
  
 /* Profile*/ 
@@ -583,8 +619,6 @@ justify-content: center;
 
 }
 
-
-
 .game_card .new_price {
   color: #429750;
   font-size: 15px;
@@ -598,8 +632,6 @@ justify-content: center;
   max-width: 80%;
   margin-top: 10px;
   border-radius: 10px;
- 
-
 }
 
 .add_cart {
@@ -638,7 +670,6 @@ justify-content: center;
   margin: -20px -20px 0px 40px;
 
 }
-
 
 
 .xxl_text {
@@ -723,7 +754,7 @@ max-width: 100%;
 
 
 
-/* Mobile*/ 
+/* ------ Mobile ------ */
 
  .main__section_cart {
   display: grid;
@@ -757,8 +788,6 @@ max-width: 100%;
 
 
 }
-
-
 
  .contact_wrapper {
   display: flex;
@@ -819,32 +848,10 @@ max-width: 100%;
  }
 
 
- /* Cart page */
+ /*----- Cart page -----*/
 
 
- .button_complete {
 
-
-width: 70%;
-margin: 50px auto 20px  auto;
-height: 66px;
-flex-shrink: 0;
-background-color: #95C180;
-border: none;
-box-shadow: -2px 3px 4px rgb(94, 94, 94);
-color: #FFF;
-font-family: Roboto;
-font-size: 30px;
-text-align: center;
-line-height: 70px;
- }
-
- .button_complete:hover {
-  background-color: #95C180;
-  border-width: 1px;  
-  box-shadow: 0 0 0 4px #c5c6ff;
-  transition: 0.2s;
- }
 
  .success__section {
   min-height: 600px;
@@ -852,8 +859,6 @@ line-height: 70px;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  
-
 
  }
  
@@ -866,29 +871,7 @@ line-height: 70px;
 
  }
 
- .success__button_sec {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 20px;
-  
- }
 
- .success_btn {
-  background-color: #CBD8E2;
-  border-radius: 10px;
-  margin: 20px;
-  display: flex;
-  width: 160px;
-  height: 25px;
-  padding: 4px 16px 3px 17px;
-  justify-content: center;
-  align-items: center;
- }
-
- .success_btn:hover {
-background-color: #95C180;
-
- }
 
 
 
@@ -919,7 +902,9 @@ line-height: normal;
   font-size: 30px;
   padding-top: 40px;
 }
- /* korrigering farge cart*/
+
+
+ /* correct  color  cart*/
 .green {
   color: #429750;
   font-weight: 700;
@@ -1082,10 +1067,8 @@ padding: 5px;
 
 
 /*------------    Responsive Media Query     ----------------*/
-/* small mobile */
 
-
-/* Mobile*/
+/*///////----- Mobile S -----////////*/
 
 @media only screen and (max-width: 432px)    {
 
@@ -1101,18 +1084,15 @@ padding: 5px;
  
 }
 
-
-
-
 .game_card:hover {
   background: linear-gradient(#FFFFFF, #D6EDCB);
 
-  
 }
 
 
-
 }
+
+/*///////----- Mobile L -----////////*/
 
 @media only screen and (max-width: 600px) {
   
@@ -1181,19 +1161,14 @@ padding: 5px;
      transform: rotate(-50deg);
      transition: 0.8s;
    
-    
-     
-     
      }
+
+
      #sidemenu.active .x_hide {
        display: none;
        transition: 0.8s;
        }
        
-  
-   
-
-
    #sidemenu a {
     list-style: none;
     color: #7E7EC5;
@@ -1238,9 +1213,7 @@ padding: 5px;
 
    }
 
-   .gameinfo_section {
-    
-   }
+
   .gameinfo__container,
    .gameinfo_img img {
     border-radius: 25px 25px 0px 0px;
@@ -1269,6 +1242,9 @@ padding: 5px;
   
 }
 
+/*///////----- Half screen Desktop -----////////*/
+
+
 @media only screen and (max-width: 1010px) {
   .contact_icons {
     display: none;
@@ -1282,13 +1258,9 @@ padding: 5px;
   
 }
   
-
-
-
-
  
- 
-  /* Desktop*/
+
+  /*///////------ Desktop -----////////*/
 
   @media only screen and (min-width: 600px) {
 
