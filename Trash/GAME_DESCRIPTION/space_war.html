@@ -2,34 +2,45 @@
 <html lang="en">
 
 <head>
-  <meta name="descripton" content="Complete your buy order here in your cart">
+  <meta name="descripton" content="Game info about Space War">
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="../js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap"
     rel="stylesheet">
+  <title>Space War</title>
 </head>
 
 <body>
   <header>
     <div class="searchbox">
       <form>
-        <input type="text" name="Search" placeholder="Search for game....">
+        <input type="text" name="searchbar" placeholder="Search for game....">
         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
       </form>
     </div>
-    <a href="index.html"><img class="logo__header" src="IMAGES/GameHub_Logo.png" alt="Logo"></a>
+    <a href="../index.html"><img class="logo__header" src="../IMAGES/GameHub_Logo.png" alt="Logo"></a>
     <label for="search-toggle" class="search__icon">
-      <img src="IMAGES/Iconsvg-png/search.png" alt="search for a game">
+      <img src="../IMAGES/Iconsvg-png/search.png" alt="search for a game">
     </label>
     <input type="checkbox" id="search-toggle">
     <input class="searchbar" type="text" placeholder="Search for game">
     <div class="menu__cart">
-      <a href="cart.html"><img src="IMAGES/Iconsvg-png/bag.png" alt="cart"></a>
+      <a href="../cart.html"><img src="../IMAGES/Iconsvg-png/bag.png" alt="bag"></a>
     </div>
     <div class="menu__profile">
-      <a href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png" alt="profile"></a>
+      <a href="../profile.html"><img src="../IMAGES/Iconsvg-png/Profile.png" alt="profile"></a>
     </div>
   </header>
 
@@ -41,109 +52,81 @@
     </div>
 
     <div class="sidemenu_container">
-      <a href="index.html">
-        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/home.png" alt="Home">HOME</div>
+      <a href="../index.html">
+        <div class="topmenu_item_mob"><img src="../IMAGES/Iconsvg-png/home.png" alt="home">HOME</div>
       </a>
-      <a href="games.html">
-        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/Games.png" alt="Games">GAMES</div>
+      <a href="../games.html">
+        <div class="topmenu_item_mob"><img src="../IMAGES/Iconsvg-png/Games.png" alt="games">GAMES</div>
       </a>
-      <a href="about.html">
-        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/info.png" alt="Info">ABOUT</div>
+      <a href="../about.html">
+        <div class="topmenu_item_mob"><img src="../IMAGES/Iconsvg-png/info.png" alt="info">ABOUT</div>
       </a>
-      <a href="contact.html">
-        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/phone.png" alt="Phone">CONTACT</div>
+      <a href="../contact.html">
+        <div class="topmenu_item_mob"><img src="../IMAGES/Iconsvg-png/phone.png" alt="phone">CONTACT</div>
       </a>
     </div>
   </div>
 
   <div class="topmenu_container">
-    <a href="index.html">
+    <a href="../index.html">
       <div class="topmenu_item">HOME</div>
     </a>
-    <a href="games.html">
+    <a href="../games.html">
       <div class="topmenu_item">GAMES</div>
     </a>
-    <a href="about.html">
+    <a href="../about.html">
       <div class="topmenu_item">ABOUT</div>
     </a>
-    <a href="contact.html">
+    <a href="../contact.html">
       <div class="topmenu_last">CONTACT</div>
     </a>
+
   </div>
 
 
-  <div class="main__section">
-    <section class="white__section">
-      <h1>My cart</h1>
-      <table>
-        <tr>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-        </tr>
-        <tr>
-          <td>
-            <div class="cart_info">
-              <img src="IMAGES/Game_cover/GameHub_covers9.jpg" alt="Cyber punk" title="Cyberpunk">
-              <div>
-                <p>CYBER PUNK</p>
-              </div>
-            </div>
-          </td>
-          <td> <input type="number" value="1" class="input_num"></td>
-          <td>
-            <div>
-              <p class="old_price">$12.00</p>
-              <p class="new_price">$9.90</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="cart_info">
-              <img src="IMAGES/Game_cover/GameHub_covers4.jpg" alt="Furious" title="Furious">
-              <div>
-                <p>FURIOUS</p>
-              </div>
-            </div>
-          </td>
-          <td> <input type="number" value="1" class="input_num"></td>
-          <td>
-            <div>
-              <p class="old_price">$12.00</p>
-              <p class="new_price">$9.90</p>
-            </div>
-          </td>
-        </tr>
 
-      </table>
+  <div class="gameinfo__container">
 
-    </section>
 
-    <div class="white__section">
-
-      <table>
-        <tr>
-          <td class="text_left">Sub-total</td>
-          <td class="text_right">$19.80</td>
-        </tr>
-        <tr>
-          <td class="text_left">Delivery</td>
-          <td class="text_right green">FREE</td>
-        </tr>
-        <tr>
-          <td class="text_left total">TOTAL</td>
-          <td class="text_right total">$19.80</td>
-
-        </tr>
-      </table>
-
-      <a href="success.html">
-        <div class="button_complete">Complete order </div>
-      </a>
+    <div class="gameinfo_img">
+      <img src="../IMAGES/Game_cover/GameHub_covers6.jpg" alt="Space War" title="Space war">
     </div>
 
+    <div class="gameinfo_reverse">
+
+
+      <section class="gameinfo_section">
+
+
+        <h2>Space War</h2>
+
+        <p>Space War is an epic computer game that takes place in a far-off galaxy where rival factions are engaged in a
+          fierce battle for control of the universe.
+          As a space pilot, you must navigate your ship through treacherous space battles, defeat enemy forces, and
+          become the most powerful force in the galaxy.</p>
+
+        <p>In Space War you have access to a wide range of spacecraft, each with its unique strengths and weaknesses.
+          You can customize your ship's weapons and defenses, upgrading them as you progress through the game.</p>
+
+
+      </section>
+
+      <div class="gameinfo_cartsection">
+
+        <div class="gameinfo_price">
+
+          <h2 class="old_price">$12.00</h2>
+          <h2 class="new_price">$9.90</h2>
+
+        </div>
+        <button class="button_cart">Add to cart <i class="fa fa-plus-circle fa-1x" aria-hidden="true"></i></button>
+      </div>
+
+    </div>
   </div>
+
+
+
 
   <div class="footer_mob">
     <div class="footer_section_mob">
@@ -191,10 +174,10 @@
 
 
   <nav class="menubar">
-    <a class="menu_item1" href="sale.html"><img src="IMAGES/Iconsvg-png/sale-menu.png" alt="sale"> </a>
-    <a class="menu_item2" href="index.html"><img src="IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
-    <a class="menu_item_active" href="cart.html"><img src="IMAGES/Iconsvg-png/Bag.png" alt="Bag"></a>
-    <a class="menu_item4" href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png" alt="Profile"></a>
+    <a class="menu_item1" href="../sale.html"><img src="../IMAGES/Iconsvg-png/sale-menu.png" alt="sale"> </a>
+    <a class="menu_item2" href="../index.html"><img src="../IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
+    <a class="menu_item3" href="../cart.html"><img src="../IMAGES/Iconsvg-png/Bag.png" alt="Bag"></a>
+    <a class="menu_item4" href="../profile.html"><img src="../IMAGES/Iconsvg-png/Profile.png" alt="Profile"></a>
   </nav>
 
   <footer>
@@ -241,7 +224,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/menu.js"></script>
 </body>
 
 </html>

@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="descripton" content="Your order is completed">
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success</title>
   <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <script src="js/script.js"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
-<title>Success</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <header>
     <div class="searchbox">
@@ -28,7 +21,7 @@
     </div>
     <a href="index.html"><img class="logo__header" src="IMAGES/GameHub_Logo.png" alt="Logo"></a>
     <label for="search-toggle" class="search__icon">
-        <img src="IMAGES/Iconsvg-png/search.png" alt="search for a game">
+      <img src="IMAGES/Iconsvg-png/search.png" alt="search for a game">
     </label>
     <input type="checkbox" id="search-toggle">
     <input class="searchbar" type="text" placeholder="Search for game">
@@ -38,47 +31,67 @@
     <div class="menu__profile">
       <a href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png" alt="profile"></a>
     </div>
-</header>
+  </header>
 
-<div id="sidemenu">
-  <div class="button-side" onclick="show_hide()">
-    <span class="x_top"></span>
-    <span class="x_bottom"></span>
-    <span class="x_hide"></span>
+  <div id="sidemenu">
+    <div class="button-side" onclick="show_hide()">
+      <span class="x_top"></span>
+      <span class="x_bottom"></span>
+      <span class="x_hide"></span>
+    </div>
+
+    <div class="sidemenu_container">
+      <a href="index.html">
+        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/home.png" alt="Home">HOME</div>
+      </a>
+      <a href="games.html">
+        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/Games.png" alt="Games">GAMES</div>
+      </a>
+      <a href="about.html">
+        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/info.png" alt="Info">ABOUT</div>
+      </a>
+      <a href="contact.html">
+        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/phone.png" alt="Phone">CONTACT</div>
+      </a>
+    </div>
   </div>
-  
-<div class="sidemenu_container">
-  <a href="index.html"><div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/home.png" alt="Home">HOME</div></a>
-  <a href="games.html"><div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/Games.png" alt="Games">GAMES</div></a>
-  <a href="about.html"><div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/info.png" alt="Info">ABOUT</div></a>
-  <a href="contact.html"><div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/phone.png" alt="Phone">CONTACT</div></a>
-</div>
-</div>
 
-<div class="topmenu_container">
-  <a href="index.html"><div class="topmenu_item_active">HOME</div></a>
-  <a href="games.html"><div class="topmenu_item">GAMES</div></a>
-  <a href="about.html"><div class="topmenu_item">ABOUT</div></a>
-  <a href="contact.html"><div class="topmenu_last">CONTACT</div></a>
-</div>
-   
-    
-    <section class="success__section">
+  <div class="topmenu_container">
+    <a href="index.html">
+      <div class="topmenu_item_active">HOME</div>
+    </a>
+    <a href="games.html">
+      <div class="topmenu_item">GAMES</div>
+    </a>
+    <a href="about.html">
+      <div class="topmenu_item">ABOUT</div>
+    </a>
+    <a href="contact.html">
+      <div class="topmenu_last">CONTACT</div>
+    </a>
+  </div>
 
-      <i class="fa-solid fa-circle-check fa-2xl"></i>
-      <h2>Payment successful </h2>
-      <p>Thank you! Your payment is complete</p>
-      <div class="success__button_sec">
-      <a class="success_btn" href="index.html"><div>Return home</div></a>
-      <a class="success_btn" href="games.html"><div>Continue shopping</div></a>
-      </div>
-      
-    
 
-    
-      
-    </section>
-    
+  <section class="success__section">
+
+    <i class="fa-solid fa-circle-check fa-2xl"></i>
+    <h2>Payment successful </h2>
+    <p>Thank you! Your payment is complete</p>
+    <div class="success__button_sec">
+      <a class="success_btn" href="index.html">
+        <div>Return home</div>
+      </a>
+      <a class="success_btn" href="games.html">
+        <div>Continue shopping</div>
+      </a>
+    </div>
+
+
+
+
+
+  </section>
+
 
   <div class="footer_mob">
     <div class="footer_section_mob">
@@ -88,29 +101,29 @@
         <li>Media</li>
         <li>Career</li>
       </ul>
-  
+
     </div>
     <div class="footer_section_mob">
       <h3>Help</h3>
       <ul>
-  <li>Support center</li>
-  <li>Customer refund</li>
-  </ul>
+        <li>Support center</li>
+        <li>Customer refund</li>
+      </ul>
     </div>
     <div class="footer_section_mob">
       <h3>Account</h3>
       <ul>
-  <li>Profile</li>
-  <li>My account</li>
-  <li>Order history</li>
-  </ul>
-  </div>
+        <li>Profile</li>
+        <li>My account</li>
+        <li>Order history</li>
+      </ul>
+    </div>
     <div class="footer_section_social">
       <h3>Social Media</h3>
- <a href="#"><i class="fab fa-facebook-f"></i></a>
- <a href="#"><i class="fab fa-twitter"></i></a>
- <a href="#"><i class="fab fa-instagram"></i></a>
- <a href="#"><i class="fab fa-snapchat"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-snapchat"></i></a>
     </div>
     <div class="footer_section_signup">
       <h3>Sign up for special offers</h3>
@@ -125,56 +138,58 @@
 
 
 
-<nav class="menubar">
-  <a class="menu_item1" href="sale.html"><img src="IMAGES/Iconsvg-png/sale-menu.png" alt="sale"> </a>
-  <a class="menu_item_active" href="index.html"><img src="IMAGES/Iconsvg-png/Home.png" alt="Home"></a> 
-  <a class="menu_item3" href="cart.html"><img src="IMAGES/Iconsvg-png/Bag.png" alt="Bag"></a>
-  <a class="menu_item4" href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png" alt="Profile"></a>
-</nav>
+  <nav class="menubar">
+    <a class="menu_item1" href="sale.html"><img src="IMAGES/Iconsvg-png/sale-menu.png" alt="sale"> </a>
+    <a class="menu_item_active" href="index.html"><img src="IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
+    <a class="menu_item3" href="cart.html"><img src="IMAGES/Iconsvg-png/Bag.png" alt="Bag"></a>
+    <a class="menu_item4" href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png" alt="Profile"></a>
+  </nav>
 
-<footer>
-  <div class="footer_left footer_container_desktop">
-    <div class="footer_section">
-      <h3>Sign up for special offers</h3>
-      <div>
-        <form>
-          <input type="text" name="Enter email" placeholder="Enter email">
-          <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
-        </form>
+  <footer>
+    <div class="footer_left footer_container_desktop">
+      <div class="footer_section">
+        <h3>Sign up for special offers</h3>
+        <div>
+          <form>
+            <input type="text" name="Enter email" placeholder="Enter email">
+            <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer_section">
+        <h3>Company</h3>
+        <ul>
+          <li>About us</li>
+          <li>Media</li>
+          <li>Career</li>
+        </ul>
+      </div>
+      <div class="footer_section">
+        <h3>Help</h3>
+        <ul>
+          <li>Support center</li>
+          <li>Customer refund</li>
+        </ul>
+      </div>
+      <div class="footer_section">
+        <h3>Account</h3>
+        <ul>
+          <li>Profile</li>
+          <li>My account</li>
+          <li>Order history</li>
+        </ul>
       </div>
     </div>
-    <div class="footer_section">
-      <h3>Company</h3>
-      <ul>
-  <li>About us</li>
-  <li>Media</li>
-  <li>Career</li>
-</ul>
+    <div class="footer_right">
+      <div class="footer_section footer_section_web">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+      </div>
     </div>
-    <div class="footer_section">
-      <h3>Help</h3>
-      <ul>
-  <li>Support center</li>
-  <li>Customer refund</li>
-</ul>
-    </div>
-    <div class="footer_section">
-      <h3>Account</h3>
-      <ul>
-  <li>Profile</li>
-  <li>My account</li>
-  <li>Order history</li>
-  </ul>
-    </div>
-  </div>
-  <div class="footer_right">
-    <div class="footer_section footer_section_web">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-snapchat"></i></a>
-    </div>
-  </div>
-    </footer>
+  </footer>
+  <script src="js/menu.js"></script>
 </body>
+
 </html>

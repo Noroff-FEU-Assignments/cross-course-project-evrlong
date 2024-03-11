@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta name="descripton" content="About GameHub. Here you can find info about Gamehub.">
+  <meta name="descripton" content="Details about selected game">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
+  <title></title>
   <link rel="stylesheet" href="CSS/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap"
     rel="stylesheet">
@@ -15,21 +15,21 @@
   <header>
     <div class="searchbox">
       <form>
-        <input type="text" name="Search" placeholder="Search for game....">
+        <input type="text" name="searchbar" placeholder="Search for game....">
         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
       </form>
     </div>
-    <a href="index.html"><img class="logo__header" src="IMAGES/GameHub_Logo.png" alt="Logo"></a>
+    <a href="../index.html"><img class="logo__header" src="../IMAGES/GameHub_Logo.png" alt="Logo"></a>
     <label for="search-toggle" class="search__icon">
-      <img src="IMAGES/Iconsvg-png/search.png" alt="search for a game">
+      <img src="../IMAGES/Iconsvg-png/search.png" alt="search for a game">
     </label>
     <input type="checkbox" id="search-toggle">
     <input class="searchbar" type="text" placeholder="Search for game">
     <div class="menu__cart">
-      <a href="cart.html"><img src="IMAGES/Iconsvg-png/bag.png" alt="cart"></a>
+      <a href="../cart.html"><img src="../IMAGES/Iconsvg-png/bag.png" alt="bag"></a>
     </div>
     <div class="menu__profile">
-      <a href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png" alt="profile"></a>
+      <a href="../profile.html"><img src="../IMAGES/Iconsvg-png/Profile.png" alt="profile"></a>
     </div>
   </header>
 
@@ -41,67 +41,42 @@
     </div>
 
     <div class="sidemenu_container">
-      <a href="index.html">
-        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/home.png" alt="Home">HOME</div>
+      <a href="../index.html">
+        <div class="topmenu_item_mob"><img src="../IMAGES/Iconsvg-png/home.png" alt="home">HOME</div>
       </a>
-      <a href="games.html">
-        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/Games.png" alt="Games">GAMES</div>
+      <a href="../games.html">
+        <div class="topmenu_item_mob"><img src="../IMAGES/Iconsvg-png/Games.png" alt="games">GAMES</div>
       </a>
-      <a href="about.html">
-        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/info.png" alt="Info">ABOUT</div>
+      <a href="../about.html">
+        <div class="topmenu_item_mob"><img src="../IMAGES/Iconsvg-png/info.png" alt="info">ABOUT</div>
       </a>
-      <a href="contact.html">
-        <div class="topmenu_item_mob"><img src="IMAGES/Iconsvg-png/phone.png" alt="Phone">CONTACT</div>
+      <a href="../contact.html">
+        <div class="topmenu_item_mob"><img src="../IMAGES/Iconsvg-png/phone.png" alt="phone">CONTACT</div>
       </a>
     </div>
   </div>
 
   <div class="topmenu_container">
-    <a href="index.html">
+    <a href="../index.html">
       <div class="topmenu_item">HOME</div>
     </a>
-    <a href="games.html">
+    <a href="../games.html">
       <div class="topmenu_item">GAMES</div>
     </a>
-    <a href="about.html">
-      <div class="topmenu_item_active">ABOUT</div>
+    <a href="../about.html">
+      <div class="topmenu_item">ABOUT</div>
     </a>
-    <a href="contact.html">
+    <a href="../contact.html">
       <div class="topmenu_last">CONTACT</div>
     </a>
+
   </div>
 
 
 
-  <section class="about__section">
-
-    <img class="logo_about" src="IMAGES/GameHub_Logo.png" alt="Gamebub Logo" title="Gamehub Logo ">
-
-    <h2>About us</h2>
-
-    <p>Welcome to GameHub, your one-stop-shop for all your gaming needs! We are an online computer game store that is
-      dedicated
-      to providing gamers of all ages and levels with the latest and greatest games at affordable prices.</p>
-
-    <p>At GameHub, we are passionate about gaming, and we understand the importance of having access to a wide range of
-      gaming products that are both affordable and high-quality.
-      That's why we carefully curate our selection of games and games ensuring that we only offer products that we would
-      be proud to use ourselves.</p>
-
-    <p>We pride ourselves on providing exceptional customer service, and we are committed to ensuring that every
-      customer has a positive experience when shopping
-      with us. Our team of experienced gaming experts is always on hand to provide advice and support, helping you to
-      find the perfect game or
-      accessory to suit your needs.</p>
-
-    <p>At Gamehub, we believe that gaming is not just a hobby, but a way of life. We are committed to providing you with
-      everything
-      you need to enhance your gaming experience and take your gaming to the next level. So why wait? Browse our
-      selection of games
-      today and start gaming like a pro!</p>
-
-
-  </section>
+  <div class="gameinfo__container">
+    <div class="loader"></div>
+  </div>
 
 
 
@@ -148,13 +123,11 @@
     </div>
   </div>
 
-
-
   <nav class="menubar">
-    <a class="menu_item1" href="sale.html"><img src="IMAGES/Iconsvg-png/sale-menu.png" alt="sale"> </a>
-    <a class="menu_item_active" href="index.html"><img src="IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
-    <a class="menu_item3" href="cart.html"><img src="IMAGES/Iconsvg-png/Bag.png" alt="Bag"></a>
-    <a class="menu_item4" href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png" alt="Profile"></a>
+    <a class="menu_item1" href="../sale.html"><img src="../IMAGES/Iconsvg-png/sale-menu.png" alt="sale"> </a>
+    <a class="menu_item2" href="../index.html"><img src="../IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
+    <a class="menu_item3" href="../cart.html"><img src="../IMAGES/Iconsvg-png/Bag.png" alt="Bag"></a>
+    <a class="menu_item4" href="../profile.html"><img src="../IMAGES/Iconsvg-png/Profile.png" alt="Profile"></a>
   </nav>
 
   <footer>
@@ -201,7 +174,8 @@
       </div>
     </div>
   </footer>
-  <script src="js/menu.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/details.js"></script>
 </body>
 
 </html>

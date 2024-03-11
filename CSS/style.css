@@ -9,6 +9,28 @@ body {
   padding: 0;
 }
 
+/* --------- Loader  --------*/
+
+.loader {
+  border-top: 25px solid #95c180;
+  border-right: 25px solid #73738f;
+  border-bottom: 25px solid #73738f;
+  border-left: 25px solid #95c180;
+  border-radius: 5%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Font style */
 
 a:link {
@@ -88,11 +110,10 @@ p {
 }
 
 .new_price {
-  color: #000;
+  color: #429750;
   font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 900;
   line-height: normal;
 }
 
@@ -550,11 +571,6 @@ header input {
   justify-content: center;
 }
 
-.container__card a {
-  margin-top: 70px;
-  margin: 20px;
-}
-
 .game_card:hover {
   background: linear-gradient(#ffffff, #d6edcb);
   border-width: 1px;
@@ -574,13 +590,17 @@ header input {
 
 .game_card .new_price {
   color: #429750;
-  font-size: 15px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .game_card img {
-  margin: 10px 15px 0px 15px;
   max-width: 80%;
-  margin-top: 10px;
+  margin: 20px auto;
+  display: block;
   border-radius: 10px;
 }
 
@@ -602,8 +622,9 @@ header input {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 5px 5px 25px grey;
+  margin: 20px;
   width: 150px;
-  height: 250px;
+  height: auto;
 }
 
 .xxl_text,
@@ -963,7 +984,8 @@ textarea::placeholder {
   }
 
   .game_card img {
-    margin: 10px 12px 0px 12px;
+    margin: 10px auto;
+    display: block;
   }
 
   .game_card:hover {
@@ -1132,11 +1154,12 @@ textarea::placeholder {
 
   .game_card {
     width: 220px;
-    height: 335px;
+    height: auto;
   }
 
   .game_card img {
-    margin: 20px 22px 0px 22px;
+    margin: 20px auto;
+    display: block;
   }
 
   .main__section,
