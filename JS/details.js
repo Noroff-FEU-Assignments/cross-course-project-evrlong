@@ -1,6 +1,9 @@
-const gameInfo = document.querySelector(".gameinfo__container")
 const title = document.querySelector("title")
 const queryString = document.location.search;
+const errorCont = document.querySelector(".error_cont")
+const container = document.querySelector(".gameinfo")
+const loader = document.querySelector(".loader")
+
 
 console.log ("query", queryString)
 
@@ -18,6 +21,7 @@ async function fetchGame() {
     try {
         const response = await fetch(url);
         const game = await response.json();
+        loader.classList.remove("loader");
       
 
         console.log("test", game);
@@ -25,8 +29,10 @@ async function fetchGame() {
         createHtml(game);
     }
     catch(error) {
-        console.log(error)
-        gameInfo.innerHTML = message("error", error)
+        const errorMsg = errorMessage("red", error)
+        container.classList.add("error_msg")
+        container.innerHTML = errorMsg; 
+
     }
 
 }
@@ -40,7 +46,8 @@ fetchGame();
 function createHtml(game) {
     title.innerHTML = game.data.title
 
-
+    const gameInfo = document.createElement("div");
+    gameInfo.classList.add("gameinfo__container");
     gameInfo.innerHTML = `
     <div class="gameinfo_img">
     <img src=${game.data.image.url} alt="${game.data.title}" title="${game.data.title}">
@@ -65,7 +72,8 @@ function createHtml(game) {
         </div>
         <button class="button_cart">Add to cart <i class="fa fa-plus-circle fa-1x" aria-hidden="true"></i></button>
       </div>
-`
+`;
+container.appendChild(gameInfo);
 }
 
 

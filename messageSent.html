@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta name="descripton" content="If you want to contact Gamehub, try this page">
+  <meta name="descripton" content="Your order is completed">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+  <title>Success</title>
   <link rel="stylesheet" href="CSS/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap"
     rel="stylesheet">
@@ -33,8 +33,6 @@
     </div>
   </header>
 
-
-
   <div id="sidemenu">
     <div class="button-side" onclick="show_hide()">
       <span class="x_top"></span>
@@ -60,7 +58,7 @@
 
   <div class="topmenu_container">
     <a href="index.html">
-      <div class="topmenu_item">HOME</div>
+      <div class="topmenu_item_active">HOME</div>
     </a>
     <a href="games.html">
       <div class="topmenu_item">GAMES</div>
@@ -69,71 +67,27 @@
       <div class="topmenu_item">ABOUT</div>
     </a>
     <a href="contact.html">
-      <div class="topmenu_item_active_last">CONTACT</div>
+      <div class="topmenu_last">CONTACT</div>
     </a>
   </div>
 
 
-  <section class="contact_wrapper">
-    <side class="contact_icons">
-      <img src="IMAGES/Iconsvg-png/email.png" alt="email">
-      <img src="IMAGES/Iconsvg-png/Vectorphone.png" alt="phone">
-      <img src="IMAGES/Iconsvg-png/location.png" alt="location">
-    </side>
-    <section class="info__section">
-      <h1 id="title">Contact us</h1>
-      <p>We're always happy to hear from our customers! If you have any questions,
-        comments, or feedback, please don't hesitate to get in touch.</p>
-      <h3>Email</h3>
-      <p>Support@gamehub.com</p>
-      <p>Or use the contact form in the bottom of this page </p>
-      <h3>Phone</h3>
-      <p>(monday - friday 9am to 5pm)</p>
-      <p>(123) 456-7890</p>
-      <p>Location
-        123 Main St, Suite 456, Anytown, USA 12345. </p>
+  <section class="success__section">
+
+    <i class="fa-solid fa-circle-check fa-2xl"></i>
+    <h2>Message sent successfully</h2>
+    <p></p>
+    <a class="success_btn" href="index.html">
+      <div>Return home</div>
+    </a>
 
 
-      <h3>Location</h3>
-      <p>123 Main St, Suite 456, Anytown, USA 12345. </p>
-      <p>You can also find us on social media! Follow us on Twitter, Facebook,
-        and Instagram for news, updates, and special offers.</p>
-    </section>
 
-    <section class="form__section">
-      <h1> Contact form</h1>
-      <form id="contactForm">
-        <div class="form__style">
-          <div class="half half_first">
-            <input name="firstname" id="firstName" placeholder="First name" />
-            <div class="errorForm" id="firstNameError">&#9940;</div>
-          </div>
-          <div class="half">
-            <input name="Lastname" id="lastName" placeholder="Last name" />
-            <div class="errorForm" id="lastNameError">&#9940;</div>
-          </div>
-        </div>
 
-        <div class="form__style">
-          <input name="email" id="email" placeholder="Email Address" />
-          <div class="errorForm" id="emailError">&#9940;</div>
-        </div>
-        <div class="form__style">
-          <input name="Subject" id="subject" placeholder="Subject" />
-          <div class="errorForm" id="subjectError">&#9940;</div>
-        </div>
-        </div>
-        <div class="form__style">
-          <textarea id="message" name="message" rows="20" cols="40" placeholder="Text"></textarea>
-          <div class="errorForm" id="textError">&#9940;</div>
-        </div>
-        </div>
-        <button class="button"> <input class="cta_send" type="button" value="Send"></button>
-      </form>
 
-    </section>
 
   </section>
+
 
   <div class="footer_mob">
     <div class="footer_section_mob">
@@ -231,9 +185,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/components/fetchTitle.js"></script>
   <script src="js/menu.js"></script>
-  <script src="js/contactForm.js"></script>
 </body>
 
 </html>

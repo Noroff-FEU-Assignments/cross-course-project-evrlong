@@ -1,9 +1,8 @@
-const corsUrl ="https://noroffcors.onrender.com/"
 const url ="https://v2.api.noroff.dev/gamehub/"
-const loadUrl = corsUrl + url;
 const contCard = document.querySelector(".container__card");
 const gameCard = document.querySelector(".game_card");
 const loader = document.querySelector(".loader");
+const errorCont = document.querySelector(".error_cont")
 
 
 
@@ -15,12 +14,15 @@ async function fetchUrl() {
         const data = await response.json();
         const games = data.data;
         loader.classList.remove("loader");
-        console.log("fetch", games)
         games.forEach(game => createGameCard(game));
        
     }
     catch(error){
-    console.log(error)}
+        const errorMsg = errorMessage("red", error)
+        errorCont.innerHTML = errorMsg; 
+        loader.classList.remove("loader");
+
+    }
 }
 
 fetchUrl();
