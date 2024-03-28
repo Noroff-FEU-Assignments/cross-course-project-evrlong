@@ -4,28 +4,20 @@ const errorCont = document.querySelector(".error_cont")
 const container = document.querySelector(".gameinfo")
 const loader = document.querySelector(".loader")
 
-
-console.log ("query", queryString)
-
-
 const paramas = new URLSearchParams(queryString);
-
 const id = paramas.get("id")
-
-console.log(id)
 const url = "https://v2.api.noroff.dev/gamehub/" + id
 
-console.log(url)
+
+
+
+
 
 async function fetchGame() {
     try {
         const response = await fetch(url);
         const game = await response.json();
         loader.classList.remove("loader");
-      
-
-        console.log("test", game);
-
         createHtml(game);
     }
     catch(error) {
@@ -36,10 +28,6 @@ async function fetchGame() {
     }
 
 }
-
-
-
-
 
 fetchGame();
 

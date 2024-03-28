@@ -8,31 +8,24 @@ const errorCont = document.querySelector(".error_cont")
 
 async function fetchUrl() {
     try {
-
-
         const response = await fetch(url);
         const data = await response.json();
         const games = data.data;
         loader.classList.remove("loader");
         games.forEach(game => createGameCard(game));
-       
     }
     catch(error){
+
         const errorMsg = errorMessage("red", error)
         errorCont.innerHTML = errorMsg; 
         loader.classList.remove("loader");
-
     }
 }
 
 fetchUrl();
 
-
-
-
 function createGameCard(game){
 
-   
     const gameCardElement = document.createElement("div");
     gameCardElement.classList.add("game_card");
     gameCardElement.innerHTML = `
