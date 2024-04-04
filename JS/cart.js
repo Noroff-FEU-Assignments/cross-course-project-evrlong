@@ -1,0 +1,54 @@
+const queryString = document.location.search;
+const loader = document.querySelector(".loader")
+const cart_info = document.querySelector(".cart_info")
+const table = document.querySelector(".cart_table")
+const cartPrice = document.querySelector(".cart_price")
+
+const paramas = new URLSearchParams(queryString);
+const id = paramas.get("id")
+const url = "https://v2.api.noroff.dev/gamehub/"
+
+var inputNumberValue;
+var addedGames = [];
+
+
+
+for (var key in localStorage) {
+    if (key.startsWith("cartItem")) {
+        var gameDetails = JSON.parse(localStorage[key]);
+        if (gameDetails && gameDetails.title && !addedGames.includes(gameDetails.title))
+        {
+            addedGames.push(gameDetails.title);
+            
+              // table.addEventListener("input", function(event) {
+               
+            //  var inputElement = event.target.value;
+            //  inputNumberValue = inputElement;
+            //  console.log(inputElement)
+             
+            // })
+
+            var newRow = document.createElement("tr");
+          
+          
+         newRow.innerHTML = `
+                        <img src="${gameDetails.img}">
+                         <p>${gameDetails.title}</p>
+                         <td> <input type="number" value="1" class="input_num"></td>
+                <td class="subtotal_cart">
+                   <p class="cart_price">${gameDetails.price}</p>
+                </td>   
+                <td class="remove_item"> x
+                </td> 
+            `;
+            table.appendChild(newRow);
+
+            
+        }
+    }
+}
+
+
+
+
+

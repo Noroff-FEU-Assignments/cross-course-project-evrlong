@@ -48,31 +48,35 @@ function validateInput(event) {
         .style.border = "3px solid #f56767";
     }
 
-    localStorage.setItem("firstName", firstName.value);
-    localStorage.setItem("lastName", lastName.value);
-    localStorage.setItem("email", email.value);
-    localStorage.setItem("subject", subject.value);
-    localStorage.setItem("message", message.value);
+//makes unique key to store contactdata with
+var dateKey = Date.now().toString();
+
+var contactData = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    email: email.value,
+    subject: subject.value,
+    message: message.value
+};
+
+var contactDataString = JSON.stringify(contactData);
+
+//storing data in local storage
+localStorage.setItem("contactform_" + dateKey, contactDataString);
 
 
+//Checks lenght and emailformat before sending
     if (checkLength(firstName.value, 1) && checkLength(lastName.value, 1) && checkLength(subject.value, 1) && checkLength(message.value, 5) && validateEmail(email.value)) 
    { 
     window.location.href = "messageSent.html"
 }
 
-
-
-    console.log (firstName.value, lastName.value, email.value, subject.value, message.value)
-    console.log(event);
 }
-
-
-
-
 
 
 form.addEventListener("submit", validateInput)
 
+//checks inputlength
 function checkLength(value, len) {
     if (value.trim().length > len) {
     return true;
@@ -81,7 +85,7 @@ function checkLength(value, len) {
 }
 }
 
-
+//Checks emailformat
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);

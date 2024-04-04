@@ -3,14 +3,9 @@ const queryString = document.location.search;
 const errorCont = document.querySelector(".error_cont")
 const container = document.querySelector(".gameinfo")
 const loader = document.querySelector(".loader")
-
 const paramas = new URLSearchParams(queryString);
 const id = paramas.get("id")
 const url = "https://v2.api.noroff.dev/gamehub/" + id
-
-
-
-
 
 
 async function fetchGame() {
@@ -24,7 +19,6 @@ async function fetchGame() {
         const errorMsg = errorMessage("red", error)
         container.classList.add("error_msg")
         container.innerHTML = errorMsg; 
-
     }
 
 }
@@ -58,11 +52,44 @@ function createHtml(game) {
        }
 
         </div>
-        <button class="button_cart">Add to cart <i class="fa fa-plus-circle fa-1x" aria-hidden="true"></i></button>
+        <button id="setLocal" class="button_cart">Add to cart <i class="fa fa-plus-circle fa-1x" aria-hidden="true"></i></button>
       </div>
 `;
 container.appendChild(gameInfo);
+
+
+
+
+document.getElementById('setLocal').addEventListener('click', function()
+{ 
+  
+  var addToCart = {
+    title: game.data.title,
+    price: game.data.price,
+    img: game.data.image.url,
+
 }
+  
+var addToCartString = JSON.stringify(addToCart)
+
+
+localStorage.setItem("cartItem_" + addToCart.title, addToCartString)
+
+
+//backup
+    // localStorage.setItem(game.data.title, JSON.stringify(game.data));
+
+    // storedData = JSON.parse(localStorage.getItem(game.data.title));
+    // console.log(storedData)
+
+   
+    
+})
+
+
+
+}
+
 
 
 
