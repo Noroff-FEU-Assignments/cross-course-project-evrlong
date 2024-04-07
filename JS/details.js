@@ -57,9 +57,6 @@ function createHtml(game) {
 `;
 container.appendChild(gameInfo);
 
-
-
-
 document.getElementById('setLocal').addEventListener('click', function()
 { 
   
@@ -75,19 +72,8 @@ var addToCartString = JSON.stringify(addToCart)
 
 localStorage.setItem("cartItem_" + addToCart.title, addToCartString)
 
-
-//backup
-    // localStorage.setItem(game.data.title, JSON.stringify(game.data));
-
-    // storedData = JSON.parse(localStorage.getItem(game.data.title));
-    // console.log(storedData)
-
    
-    
 })
-
-
-
 }
 
 

@@ -24,8 +24,9 @@ async function fetchUrl() {
 
 fetchUrl();
 
-function createGameCard(game){
-
+async function createGameCard(game){
+try 
+   { 
     const gameCardElement = document.createElement("div");
     gameCardElement.classList.add("game_card");
     gameCardElement.innerHTML = `
@@ -36,14 +37,16 @@ ${game.discountedPrice === game.price ? `<h2 class="new_price"> $${game.price}</
   <h2 class="old_price"> $${game.price}</h2>
  <h2 class="new_price"> $${game.discountedPrice}</h2>
  </a>`
- }
-    `;
+ }`;
 
-    contCard.appendChild(gameCardElement);
+contCard.appendChild(gameCardElement);
 
 }
+catch(error){
+    const errorMsg = errorMessage("red", error)
+    errorCont.innerHTML = errorMsg; 
+    loader.classList.remove("loader");
+}
 
-
-
-
+ }
 

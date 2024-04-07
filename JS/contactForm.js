@@ -61,18 +61,14 @@ var contactData = {
 
 var contactDataString = JSON.stringify(contactData);
 
-//storing data in local storage
-localStorage.setItem("contactform_" + dateKey, contactDataString);
-
 
 //Checks lenght and emailformat before sending
-    if (checkLength(firstName.value, 1) && checkLength(lastName.value, 1) && checkLength(subject.value, 1) && checkLength(message.value, 5) && validateEmail(email.value)) 
-   { 
+    if (checkLength(firstName.value, 1) && checkLength(lastName.value, 1) && checkLength(subject.value, 1) && checkLength(message.value, 5) && validateEmail(email.value)) { 
+        localStorage.setItem("contactform_" + dateKey, contactDataString);
     window.location.href = "messageSent.html"
 }
 
 }
-
 
 form.addEventListener("submit", validateInput)
 

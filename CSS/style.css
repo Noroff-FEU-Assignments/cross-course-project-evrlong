@@ -176,19 +176,21 @@ footer ul {
 /*----- buttons -----*/
 
 .cta_send {
-  display: inline-flex;
-  width: fit-content;
-  padding: 5px;
+  margin-left: 20px;
+  padding: 10px;
   box-shadow: 0px 5px 25px grey;
   border-radius: 5px;
   background: var(--green, #95c180);
   color: #ffffff;
-  font-size: 16px;
+  font-size: 19px;
   font-family: Roboto;
   font-weight: 400;
   border-style: hidden;
 }
 
+.cta_send:hover {
+  cursor: pointer;
+}
 .button_complete {
   width: 70%;
   margin: 50px auto 20px auto;
@@ -721,6 +723,10 @@ p {
   border: 1px solid #000;
   background: #95c180;
   box-shadow: -1px 1px 2px rgb(109, 109, 109);
+}
+
+.button_cart:hover {
+  cursor: pointer;
 }
 .gameinfo_cartsection {
   display: grid;
