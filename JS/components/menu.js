@@ -1,5 +1,4 @@
-//menubar 
+//menubar
 function show_hide() {
-    document.getElementById('sidemenu').classList.toggle('active');
-    }
-    
+  document.getElementById("sidemenu").classList.toggle("active");
+}
