@@ -777,10 +777,6 @@ p {
   grid-template-rows: 300px;
 }
 
-.info__section {
-  width: 90%;
-}
-
 .info__section > * {
   padding: 5px;
   padding-left: 20px;
@@ -801,6 +797,10 @@ p {
   margin-left: 20px;
 }
 
+.form__section {
+  width: 100%;
+}
+
 .contact_section {
   display: flex;
   flex-wrap: wrap;
@@ -808,7 +808,7 @@ p {
 
 .contact_wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   max-width: 80%;
   margin: 0 auto;
@@ -1205,6 +1205,9 @@ textarea::placeholder {
   .contact_icons {
     display: none;
   }
+  .contact_wrapper {
+    flex-wrap: wrap;
+  }
 }
 
 /*///////------ Desktop -----////////*/
@@ -1276,8 +1279,11 @@ textarea::placeholder {
   }
 
   .info__section {
-    width: 60%;
+    width: 100%;
   }
+  /* .contact_wrapper {
+    flex-wrap: nowrap;
+  } */
 
   /* Hide items */
   #sidemenu,
@@ -1287,3 +1293,10 @@ textarea::placeholder {
     display: none;
   }
 }
+
+/* info section */
+/* @media only screen and (min-width: 600px) {
+  .contact_wrapper {
+    flex-wrap: nowrap;
+  }
+} */
