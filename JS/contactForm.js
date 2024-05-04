@@ -15,6 +15,7 @@ function validateInput(event) {
 
   if (checkLength(firstName.value, 1)) {
     firstNameError.style.display = "none";
+    firstName.style.border = "1px solid #95c180";
   } else {
     firstNameError.style.display = "block";
     firstName.style.border = "3px solid #f56767";
@@ -22,6 +23,7 @@ function validateInput(event) {
 
   if (checkLength(lastName.value, 1)) {
     lastNameError.style.display = "none";
+    lastName.style.border = "1px solid #95c180";
   } else {
     lastNameError.style.display = "block";
     lastName.style.border = "3px solid #f56767";
@@ -29,6 +31,7 @@ function validateInput(event) {
 
   if (checkLength(subject.value, 1)) {
     subjectError.style.display = "none";
+    subject.style.border = "1px solid #95c180";
   } else {
     subjectError.style.display = "block";
     subject.style.border = "3px solid #f56767";
@@ -36,12 +39,14 @@ function validateInput(event) {
 
   if (checkLength(message.value, 5)) {
     messageError.style.display = "none";
+    message.style.border = "1px solid #95c180";
   } else {
     messageError.style.display = "block";
     message.style.border = "3px solid #f56767";
   }
   if (validateEmail(email.value)) {
     emailError.style.display = "none";
+    email.style.border = "1px solid #95c180";
   } else {
     emailError.style.display = "block";
     email.style.border = "3px solid #f56767";

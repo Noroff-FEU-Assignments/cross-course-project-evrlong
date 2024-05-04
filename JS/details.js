@@ -69,5 +69,11 @@ function createHtml(game) {
     var addToCartString = JSON.stringify(addToCart);
 
     localStorage.setItem("cartItem_" + addToCart.title, addToCartString);
+
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+    setTimeout(function () {
+      popup.style.display = "none";
+    }, 1500);
   });
 }

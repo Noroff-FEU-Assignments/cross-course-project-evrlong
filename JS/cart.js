@@ -1,11 +1,7 @@
-const queryString = document.location.search;
 const loader = document.querySelector(".loader");
 const cart_info = document.querySelector(".cart_info");
 const table = document.querySelector(".cart_table");
 const cartPrice = document.querySelector(".cart_price");
-const paramas = new URLSearchParams(queryString);
-const id = paramas.get("id");
-const url = "https://v2.api.noroff.dev/gamehub/";
 
 var inputNumberValue;
 var addedGames = [];
