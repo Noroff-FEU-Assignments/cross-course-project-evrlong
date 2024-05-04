@@ -1266,7 +1266,7 @@ textarea::placeholder {
     flex-wrap: wrap;
   }
 
-  .info_section {
+  .info__section {
     width: 50%;
   }
 
