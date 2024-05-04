@@ -801,6 +801,11 @@ p {
   margin-left: 20px;
 }
 
+.contact_section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .contact_wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -1185,17 +1190,20 @@ textarea::placeholder {
     padding: 0px 5px 50px 5px;
     margin: 0px 10px 20px 10px;
   }
+
+  .contact_icons {
+    display: none;
+  }
 }
 
 /*///////----- Half screen Desktop -----////////*/
 
 @media only screen and (max-width: 1010px) {
-  .contact_icons {
-    display: none;
-  }
-
   .about__section p {
     padding: 0px 30px 20px 30px;
+  }
+  .contact_icons {
+    display: none;
   }
 }
 
@@ -1268,7 +1276,7 @@ textarea::placeholder {
   }
 
   .info__section {
-    width: 50%;
+    width: 60%;
   }
 
   /* Hide items */
