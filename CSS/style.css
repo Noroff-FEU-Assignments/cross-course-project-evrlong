@@ -1266,6 +1266,10 @@ textarea::placeholder {
     flex-wrap: wrap;
   }
 
+  .info_section {
+    width: 50%;
+  }
+
   /* Hide items */
   #sidemenu,
   .topmenu_mobile,
