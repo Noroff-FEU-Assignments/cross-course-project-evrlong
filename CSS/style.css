@@ -1196,6 +1196,10 @@ textarea::placeholder {
   .about__section p {
     padding: 0px 30px 20px 30px;
   }
+
+  .info__section {
+    width: 100%;
+  }
 }
 
 /*///////------ Desktop -----////////*/
