@@ -989,6 +989,9 @@ textarea::placeholder {
   border-radius: 4px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
+.form__style textarea {
+  height: 150px;
+}
 
 .form__style .half {
   flex-basis: calc(50%);
