@@ -116,6 +116,7 @@ h1 {
   font-size: 30px;
   font-family: Roboto;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 
 h2 {
@@ -151,6 +152,7 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: 2px;
 }
 
 .old_price {
@@ -792,6 +794,11 @@ p {
   margin-top: 0;
 }
 
+.info__section i {
+  padding-left: 5px;
+  color: #95c180;
+}
+
 .form__section h1 {
   padding-bottom: 0px;
   margin-left: 20px;
@@ -819,22 +826,9 @@ p {
   box-shadow: 5px 5px 25px grey;
 }
 
-.contact_icons {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 170px;
-}
-
-.contact_icons > * {
-  margin-bottom: 115px;
-  height: 27px;
-  width: 27px;
-}
-
-.contact_icons img:nth-child(2) {
+/* .contact_icons img:nth-child(2) {
   margin-bottom: 148px;
-}
+} */
 
 .success__section,
 .about__section,
@@ -990,7 +984,7 @@ textarea::placeholder {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 .form__style textarea {
-  height: 150px;
+  height: 200px;
 }
 
 .form__style .half {
@@ -1185,17 +1179,13 @@ textarea::placeholder {
     grid-template-columns: 1fr;
     margin: 20px;
   }
-  .contact_icons {
+  /* .contact_icons {
     display: none;
-  }
+  } */
 
   .about__section p {
     padding: 0px 5px 50px 5px;
     margin: 0px 10px 20px 10px;
-  }
-
-  .contact_icons {
-    display: none;
   }
 }
 
@@ -1205,9 +1195,9 @@ textarea::placeholder {
   .about__section p {
     padding: 0px 30px 20px 30px;
   }
-  .contact_icons {
+  /* .contact_icons {
     display: none;
-  }
+  } */
   .contact_wrapper {
     flex-wrap: wrap;
   }
