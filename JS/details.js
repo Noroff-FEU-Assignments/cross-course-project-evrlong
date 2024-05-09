@@ -60,17 +60,17 @@ function createHtml(game) {
   container.appendChild(gameInfo);
 
   document.getElementById("setLocal").addEventListener("click", function () {
-    var addToCart = {
+    let addToCart = {
       title: game.data.title,
       price: game.data.price,
       img: game.data.image.url,
     };
 
-    var addToCartString = JSON.stringify(addToCart);
+    let addToCartString = JSON.stringify(addToCart);
 
     localStorage.setItem("cartItem_" + addToCart.title, addToCartString);
 
-    var popup = document.getElementById("popup");
+    let popup = document.getElementById("popup");
     popup.style.display = "block";
     setTimeout(function () {
       popup.style.display = "none";

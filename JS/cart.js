@@ -3,12 +3,12 @@ const cartInfo = document.querySelector(".cart_info");
 const table = document.querySelector(".cart_table");
 const cartPrice = document.querySelector(".cart_price");
 
-var inputNumberValue;
-var addedGames = [];
+let inputNumberValue;
+let addedGames = [];
 
-for (var key in localStorage) {
+for (let key in localStorage) {
   if (key.startsWith("cartItem")) {
-    var gameDetails = JSON.parse(localStorage[key]);
+    let gameDetails = JSON.parse(localStorage[key]);
     if (
       gameDetails &&
       gameDetails.title &&
@@ -16,7 +16,7 @@ for (var key in localStorage) {
     ) {
       addedGames.push(gameDetails.title);
 
-      var newRow = document.createElement("tr");
+      let newRow = document.createElement("tr");
 
       newRow.innerHTML = `
                         <img src="${gameDetails.img}">

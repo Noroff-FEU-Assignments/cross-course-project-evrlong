@@ -53,9 +53,9 @@ function validateInput(event) {
   }
 
   //makes unique key to store contactdata with
-  var dateKey = Date.now().toString();
+  let dateKey = Date.now().toString();
 
-  var contactData = {
+  let contactData = {
     firstName: firstName.value,
     lastName: lastName.value,
     email: email.value,
@@ -63,7 +63,7 @@ function validateInput(event) {
     message: message.value,
   };
 
-  var contactDataString = JSON.stringify(contactData);
+  let contactDataString = JSON.stringify(contactData);
 
   //Checks lenght and emailformat before sending
   if (

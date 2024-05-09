@@ -41,8 +41,8 @@ async function createGameCard(game) {
 
     const gameCardBtn = document.createElement("div");
     gameCardBtn.classList.add("addCartBtn");
-    gameCardBtn.innerHTML = `<div> Add to cart
-    </div>`;
+    gameCardBtn.innerHTML = `<div class="cartBtn" onclick="addToCart('${game.title}')"> Add to cart </div>`;
+
     gameCardElement.appendChild(gameCardBtn);
 
     contCard.appendChild(gameCardElement);
@@ -51,4 +51,7 @@ async function createGameCard(game) {
     errorCont.innerHTML = errorMsg;
     loader.classList.remove("loader");
   }
+}
+function addToCart(price) {
+  console.log(price);
 }
