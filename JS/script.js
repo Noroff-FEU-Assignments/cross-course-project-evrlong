@@ -40,8 +40,8 @@ async function createGameCard(game) {
       </a>`;
 
     const gameCardBtn = document.createElement("div");
-    gameCardBtn.classList.add("addCartBtnCon");
-    gameCardBtn.innerHTML = `<div><button>Add to cart</button>
+    gameCardBtn.classList.add("addCartBtn");
+    gameCardBtn.innerHTML = `<div> Add to cart
     </div>`;
     gameCardElement.appendChild(gameCardBtn);
 
