@@ -25,19 +25,25 @@ async function createGameCard(game) {
     const gameCardElement = document.createElement("div");
     gameCardElement.classList.add("game_card");
     gameCardElement.innerHTML = `
-    <a href="details.html?id=${game.id}">
-    <img src="${game.image.url}" alt="${game.title}" title="${
+      <a href="details.html?id=${game.id}">
+        <img src="${game.image.url}" alt="${game.title}" title="${
       game.title
     }"></img>
-    <h3>${game.title}</h3>
-${
-  game.discountedPrice === game.price
-    ? `<h2 class="new_price"> $${game.price}</h2>`
-    : `
-  <h2 class="old_price"> $${game.price}</h2>
- <h2 class="new_price"> $${game.discountedPrice}</h2>
- </a>`
-}`;
+        <h3>${game.title}</h3>
+        
+        ${
+          game.discountedPrice === game.price
+            ? `<h2 class="org_price">$${game.price}</h2>`
+            : `<h2 class="old_price">$${game.price}</h2>
+             <h2 class="new_price">$${game.discountedPrice}</h2>`
+        }
+      </a>`;
+
+    const gameCardBtn = document.createElement("div");
+    gameCardBtn.classList.add("addCartBtnCon");
+    gameCardBtn.innerHTML = `<div><button>Add to cart</button>
+    </div>`;
+    gameCardElement.appendChild(gameCardBtn);
 
     contCard.appendChild(gameCardElement);
   } catch (error) {

@@ -1,5 +1,5 @@
 const loader = document.querySelector(".loader");
-const cart_info = document.querySelector(".cart_info");
+const cartInfo = document.querySelector(".cart_info");
 const table = document.querySelector(".cart_table");
 const cartPrice = document.querySelector(".cart_price");
 
