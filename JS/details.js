@@ -3,9 +3,10 @@ const queryString = document.location.search;
 const errorCont = document.querySelector(".error_cont");
 const container = document.querySelector(".gameinfo");
 const loader = document.querySelector(".loader");
-const paramas = new URLSearchParams(queryString);
-const id = paramas.get("id");
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
 const url = "https://v2.api.noroff.dev/gamehub/" + id;
+let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
 
 async function fetchGame() {
   try {
@@ -29,51 +30,42 @@ function createHtml(game) {
   gameInfo.classList.add("gameinfo__container");
   gameInfo.innerHTML = `
     <div class="gameinfo_img">
-    <img src=${game.data.image.url} alt="${game.data.title}" title="${
+      <img src="${game.data.image.url}" alt="${game.data.title}" title="${
     game.data.title
   }">
     </div>
     <div class="gameinfo_reverse">
       <section class="gameinfo_section">
-      <h2>${game.data.title}</h2>
-      <p> ${game.data.description} </p>
-
+        <h2>${game.data.title}</h2>
+        <p>${game.data.description}</p>
       </section>
 
       <div class="gameinfo_cartsection">
-
         <div class="gameinfo_price">
-
-        ${
-          game.data.discountedPrice === game.data.price
-            ? `<h2 class="new_price"> $${game.data.price}</h2>`
-            : `
-        <h2 class="old_price"> $${game.data.price}</h2>
-       <h2 class="new_price"> $${game.data.discountedPrice}</h2>
-      `
-        }
-
+          ${
+            game.data.discountedPrice === game.data.price
+              ? `<h2 class="new_price">$${game.data.price}</h2>`
+              : `<h2 class="old_price">$${game.data.price}</h2>
+                 <h2 class="new_price">$${game.data.discountedPrice}</h2>`
+          }
         </div>
         <button id="setLocal" class="button_cart">Add to cart <i class="fa fa-plus-circle fa-1x" aria-hidden="true"></i></button>
       </div>
-`;
+    </div>`;
+
   container.appendChild(gameInfo);
 
   document.getElementById("setLocal").addEventListener("click", function () {
-    let addToCart = {
-      title: game.data.title,
-      price: game.data.price,
-      img: game.data.image.url,
-    };
+    const gameData = game.data;
+    console.log(cart);
+    if (cart.some((item) => item.id === gameData.id)) {
+      console.log(gameData.numberOfUnits);
+      alert("Already added");
+    } else {
+      cart.push({ ...gameData, numberOfUnits: 1 });
 
-    let addToCartString = JSON.stringify(addToCart);
-
-    localStorage.setItem("cartItem_" + addToCart.title, addToCartString);
-
-    let popup = document.getElementById("popup");
-    popup.style.display = "block";
-    setTimeout(function () {
-      popup.style.display = "none";
-    }, 1500);
+      let cartString = JSON.stringify(cart);
+      localStorage.setItem("itemsInCart", cartString);
+    }
   });
 }

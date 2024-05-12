@@ -3,6 +3,7 @@ const contCard = document.querySelector(".container__card");
 const gameCard = document.querySelector(".game_card");
 const loader = document.querySelector(".loader");
 const errorCont = document.querySelector(".error_cont");
+let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
 
 async function fetchUrl() {
   try {
@@ -41,7 +42,9 @@ async function createGameCard(game) {
 
     const gameCardBtn = document.createElement("div");
     gameCardBtn.classList.add("addCartBtn");
-    gameCardBtn.innerHTML = `<div class="cartBtn" onclick="addToCart('${game.title}')"> Add to cart </div>`;
+    gameCardBtn.innerHTML = `<div class="cartBtn" onclick="addToCart(${JSON.stringify(
+      game
+    ).replace(/"/g, "&quot;")})"> Add to cart </div>`;
 
     gameCardElement.appendChild(gameCardBtn);
 
@@ -52,6 +55,17 @@ async function createGameCard(game) {
     loader.classList.remove("loader");
   }
 }
-function addToCart(price) {
-  console.log(price);
+
+function addToCart(game) {
+  if (cart.some((item) => item.id === game.id)) {
+    alert("Already added");
+  } else {
+    cart.push({ ...game, numberOfUnits: 1 });
+
+    let cartString = JSON.stringify(cart);
+    console.log("testcart", cartString);
+    localStorage.setItem("itemsInCart", cartString);
+
+    console.log(cart);
+  }
 }

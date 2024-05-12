@@ -85,6 +85,28 @@ body {
   font-weight: 400;
 }
 
+.popupCart {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff8855;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  z-index: 1000;
+}
+
+.popupChoice {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popupChoice button {
+  margin: 8px;
+}
+
 /* Font style */
 
 a:link {
@@ -803,11 +825,75 @@ p {
   text-align: left;
 }
 
+.plusMinusCon {
+  display: flex;
+  flex-direction: row;
+}
+
+.removeItemCart:hover {
+  cursor: pointer;
+}
+
+.unitBtn {
+  margin: 0px 15px 0px 15px;
+  background-color: #429750;
+  border-radius: 30%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  padding: 5px 10px 5px 10px;
+}
+
+.unitBtn.minus {
+  padding: 5px 12px 5px 12px;
+  background-color: #974242;
+}
+
+.unitBtn:hover {
+  cursor: pointer;
+}
+
+.unitNumber {
+  padding: 5px;
+}
+
+.removeItemCart {
+  padding: 4px 8px;
+  margin: 5px;
+  background-color: #82828265;
+  border-radius: 25px;
+  max-height: 20px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.502);
+}
+
+.rowCart {
+  background-color: #b7abff54;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+.calcUnits {
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.cart_price {
+  min-width: 70px;
+}
+
+.cartUnitTitle {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
 /* ------ Mobile ------ */
 
 .main__section_cart {
   display: grid;
-  grid-template-columns: 4fr;
+  grid-template-columns: 2fr;
   grid-template-rows: 300px;
 }
 
@@ -858,21 +944,16 @@ p {
   box-shadow: 5px 5px 25px grey;
 }
 
-/* .contact_icons img:nth-child(2) {
-  margin-bottom: 148px;
-} */
-
 .success__section,
 .about__section,
 .white__section {
+  min-width: 25%;
+  margin: 20px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   top: 150px;
-  min-width: 80%;
-  max-width: 80%;
   height: fit-content;
-  margin: 50px auto 0px auto;
-  padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 5px 5px 25px grey;
@@ -1261,9 +1342,9 @@ textarea::placeholder {
 
   .main__section,
   .main__section_cart {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .menu__icon {

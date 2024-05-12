@@ -1,34 +1,93 @@
-const loader = document.querySelector(".loader");
-const cartInfo = document.querySelector(".cart_info");
 const table = document.querySelector(".cart_table");
-const cartPrice = document.querySelector(".cart_price");
+let cartString = localStorage.getItem("itemsInCart");
+//declare cart variable and check if empty or not
+let cart = cartString ? JSON.parse(cartString) : [];
 
-let inputNumberValue;
-let addedGames = [];
+function updateCart() {
+  renderCartItems();
+  localStorage.setItem("itemsInCart", JSON.stringify(cart));
 
-for (let key in localStorage) {
-  if (key.startsWith("cartItem")) {
-    let gameDetails = JSON.parse(localStorage[key]);
-    if (
-      gameDetails &&
-      gameDetails.title &&
-      !addedGames.includes(gameDetails.title)
-    ) {
-      addedGames.push(gameDetails.title);
+  const itemEqZero = cart.find((item) => item.numberOfUnits === 0);
+  if (itemEqZero) {
+    showPopup(itemEqZero.id);
+  }
+}
 
-      let newRow = document.createElement("tr");
+updateCart();
+//add new rows in cart
+function renderCartItems() {
+  table.innerHTML = "";
+  cart.forEach((item) => {
+    let newRow = document.createElement("div");
+    newRow.classList.add("rowCart");
+    newRow.innerHTML = `
+    <img src="${item.image.url}" alt="${item.title}">
+      <div class="cartUnitTitle">${item.title}</div>
+      <div class="calcUnits">
+      <div class="plusMinusCon">
+      <div class="unitBtn minus" onclick="changenumberOfUnits('minus', '${item.id}')">-</div>
+        <div class="unitNumber">${item.numberOfUnits}</div>
+        <div class="unitBtn plus" onclick="changenumberOfUnits('plus', '${item.id}')">+</div>
+        </td>
+      </div>
+    </td>
+    <td class="subtotalCart"><p class="cart_price">$${item.price}</p></td>
+    <div class="removeItemCart" onclick="removeItemCart('${item.id}')">X</div>
 
-      newRow.innerHTML = `
-                        <img src="${gameDetails.img}">
-                         <p>${gameDetails.title}</p>
-                         <td> <input type="number" value="1" class="input_num"></td>
-                <td class="subtotal_cart">
-                   <p class="cart_price">${gameDetails.price}</p>
-                </td>   
-                <td class="remove_item"> x
-                </td> 
-            `;
-      table.appendChild(newRow);
+
+  `;
+    table.appendChild(newRow);
+  });
+}
+
+// change number
+function changenumberOfUnits(action, id) {
+  cart = cart.map((item) => {
+    if (item.id === id) {
+      let numberOfUnits = item.numberOfUnits;
+      if (action === "minus" && item.numberOfUnits > 1) {
+        numberOfUnits--;
+      } else if (action === "plus") {
+        numberOfUnits++;
+      }
+      return {
+        ...item,
+        numberOfUnits,
+      };
+    }
+    return item;
+  });
+
+  function updateCart() {
+    renderCartItems();
+    localStorage.setItem("itemsInCart", JSON.stringify(cart));
+
+    const itemEqZero = cart.find((item) => item.numberOfUnits === 0);
+    if (itemEqZero) {
+      showPopup(itemEqZero.id);
     }
   }
+
+  // const itemZero = cart = cart.filter((item) => item.numberOfUnits > 0);
+
+  {
+    updateCart();
+  }
+}
+// removes items when click remove
+function removeItemCart(id) {
+  const popupCart = document.getElementById("popupCart");
+  popupCart.style.display = "block";
+  const yesBtn = popupCart.querySelector(".btnCartYes");
+  const noBtn = popupCart.querySelector(".btnCartNo");
+
+  yesBtn.addEventListener("click", function () {
+    cart = cart.filter((item) => item.id !== id);
+    popupCart.style.display = "none";
+    updateCart();
+  });
+
+  noBtn.addEventListener("click", function () {
+    popupCart.style.display = "none";
+  });
 }
