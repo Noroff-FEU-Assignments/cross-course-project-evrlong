@@ -21,20 +21,22 @@ function renderCartItems() {
     let newRow = document.createElement("div");
     newRow.classList.add("rowCart");
     newRow.innerHTML = `
-    <img src="${item.image.url}" alt="${item.title}">
-      <div class="cartUnitTitle">${item.title}</div>
-      <div class="calcUnits">
-      <div class="plusMinusCon">
+    <div class="cartItemLeft">
+    <img class="imgCart" src="${item.image.url}" alt="${item.title}">
+      ${item.title}
+</div>
+      <div class="cartItemRight">
       <div class="unitBtn minus" onclick="changenumberOfUnits('minus', '${item.id}')">-</div>
         <div class="unitNumber">${item.numberOfUnits}</div>
         <div class="unitBtn plus" onclick="changenumberOfUnits('plus', '${item.id}')">+</div>
-        </td>
+        <div class="subtotalCart"><p class="cart_price">$${item.price}</p></div>
+        <div class="removeItemCart" onclick="removeItemCart('${item.id}')">X</div>
+        </div>
+    
+        
       </div>
     </td>
-    <td class="subtotalCart"><p class="cart_price">$${item.price}</p></td>
-    <div class="removeItemCart" onclick="removeItemCart('${item.id}')">X</div>
-
-
+   
   `;
     table.appendChild(newRow);
   });
