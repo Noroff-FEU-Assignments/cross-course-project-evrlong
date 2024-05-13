@@ -21,21 +21,24 @@ function renderCartItems() {
     let newRow = document.createElement("div");
     newRow.classList.add("rowCart");
     newRow.innerHTML = `
-    <div class="cartItemLeft">
+    <div class="cartItemFirst">
     <img class="imgCart" src="${item.image.url}" alt="${item.title}">
-      <h3>${item.title}</h3>
+    <h3>${item.title}</h3>
 </div>
-      <div class="cartItemRight">
-      <div class="unitBtn minus" onclick="changenumberOfUnits('minus', '${item.id}')">-</div>
+
+
+      <div class="cartItemSecond">
+      <div class="subtotalCart"><p class="cart_price">$${item.price}</p></div>
+      <div class="plusTotMinus">
+
+<div class="unitBtn minus" onclick="changenumberOfUnits('minus', '${item.id}')">-</div>
         <div class="unitNumber">${item.numberOfUnits}</div>
         <div class="unitBtn plus" onclick="changenumberOfUnits('plus', '${item.id}')">+</div>
-        <div class="subtotalCart"><p class="cart_price">$${item.price}</p></div>
-        <div class="removeItemCart" onclick="removeItemCart('${item.id}')">X</div>
         </div>
-    
-        
-      </div>
-    </td>
+
+      <div class="removeItemCart" onclick="removeItemCart('${item.id}')"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+  
+        </div>
    
   `;
     table.appendChild(newRow);

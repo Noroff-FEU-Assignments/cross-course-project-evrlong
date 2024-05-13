@@ -825,21 +825,19 @@ p {
   text-align: left;
 }
 
-.plusMinusCon {
-  display: flex;
-  flex-direction: row;
-}
+
 
 .unitBtn {
-  background-color: #429750;
-  border-radius: 30%;
+  background-color: #757575;
+  border-radius: 25%;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  padding: 5px 10px 5px 10px;
+  padding: 3px 6px 3px 6px;
 }
 
 .unitBtn.minus {
-  padding: 5px 12px 5px 12px;
-  background-color: #974242;
+  border-radius: 25%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  padding: 4px 8px 4px 8px;
 }
 
 .unitBtn:hover {
@@ -851,13 +849,18 @@ p {
 }
 
 .removeItemCart {
-  padding: 3px 6px;
-  margin-left: 5px;
-  background-color: #82828265;
-  border-radius: 25px;
-  max-height: 20px;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.502);
+  text-align: center;
+  font-size: x-large;
+  color: rgb(127, 43, 43);
+  margin: 40px;
 }
+
+.removeItemCart:hover {
+  text-align: center;
+  color: rgb(255, 0, 0);
+}
+
+
 
 .removeItemCart:hover {
   cursor: pointer;
@@ -865,37 +868,52 @@ p {
 
 .rowCart {
   background-color: #b7abff54;
-  border-radius: 5px;
-  margin: 10px 0px 5px 0px;
-  padding: 20px;
+  margin: 10px 10px 5px 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
-.cartItemRight {
+.cartChangeOrder {
+  display: flex;
+  align-items: center;
+
+}
+
+.cartItemfirst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.cartItemFirst h3 {
+  padding: 0px;
+}
+
+
+
+.cartItemSecond {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.cartItemSecond >* {
+  margin: 5px;
+}
+
+
+
+.plusTotMinus {
+  background-color: white;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.cartItemLeft {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.cartItemLeft h3 {
-  background-color: white;
-  width: 100%; /* Makes the heading span the entire width of the container */
-  text-align: center; /* Centers the text horizontally */
-  white-space: nowrap; /* Prevents wrapping of text */
-  overflow: hidden; /* Hides any overflowing text */
-  text-overflow: ellipsis; /* Adds ellipsis (...) when text overflows */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.414);
+  border-radius: 25%;
 }
 
 .calcUnits {
@@ -972,9 +990,8 @@ p {
 .success__section,
 .about__section,
 .white__section {
-  min-width: 25%;
-  margin: 20px;
   padding: 40px;
+  margin: 40px 10px 10px 10px
   display: flex;
   flex-direction: column;
   top: 150px;
