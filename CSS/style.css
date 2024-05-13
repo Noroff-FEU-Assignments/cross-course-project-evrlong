@@ -830,10 +830,6 @@ p {
   flex-direction: row;
 }
 
-.removeItemCart:hover {
-  cursor: pointer;
-}
-
 .unitBtn {
   background-color: #429750;
   border-radius: 30%;
@@ -855,12 +851,16 @@ p {
 }
 
 .removeItemCart {
-  padding: 4px 8px;
-  margin: 5px;
+  padding: 3px 6px;
+  margin-left: 5px;
   background-color: #82828265;
   border-radius: 25px;
   max-height: 20px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.502);
+}
+
+.removeItemCart:hover {
+  cursor: pointer;
 }
 
 .rowCart {
@@ -882,9 +882,20 @@ p {
 }
 
 .cartItemLeft {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
+}
+
+.cartItemLeft h3 {
+  background-color: white;
+  width: 100%; /* Makes the heading span the entire width of the container */
+  text-align: center; /* Centers the text horizontally */
+  white-space: nowrap; /* Prevents wrapping of text */
+  overflow: hidden; /* Hides any overflowing text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) when text overflows */
 }
 
 .calcUnits {
@@ -895,7 +906,7 @@ p {
   padding: 10px;
 }
 .cart_price {
-  min-width: 50px;
+  min-width: 40px;
 }
 
 .cartUnitTitle {

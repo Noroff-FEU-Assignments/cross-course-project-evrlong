@@ -23,7 +23,7 @@ function renderCartItems() {
     newRow.innerHTML = `
     <div class="cartItemLeft">
     <img class="imgCart" src="${item.image.url}" alt="${item.title}">
-      ${item.title}
+      <h3>${item.title}</h3>
 </div>
       <div class="cartItemRight">
       <div class="unitBtn minus" onclick="changenumberOfUnits('minus', '${item.id}')">-</div>
