@@ -872,6 +872,12 @@ p {
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
+.emptyCart {
+  display: none;
+  text-align: center;
+  margin-top: 10vh;
+}
+
 .cartItemfirst {
   display: flex;
   flex-direction: column;
@@ -1222,6 +1228,9 @@ textarea::placeholder {
   .main__section_cart {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .white__section {
+    min-width: 70%;
   }
 
   #sidemenu {

@@ -6,10 +6,15 @@ let cart = cartString ? JSON.parse(cartString) : [];
 function updateCart() {
   renderCartItems();
   localStorage.setItem("itemsInCart", JSON.stringify(cart));
+  const emptyCart = document.querySelector(".emptyCart");
 
   const itemEqZero = cart.find((item) => item.numberOfUnits === 0);
   if (itemEqZero) {
     showPopup(itemEqZero.id);
+  }
+
+  if (cart.length === 0) {
+    emptyCart.style.display = "block";
   }
 }
 
