@@ -23,9 +23,8 @@ function renderCartItems() {
     newRow.innerHTML = `
     <div class="cartItemFirst">
     <img class="imgCart" src="${item.image.url}" alt="${item.title}">
-    <h3>${item.title}</h3>
+    <p>${item.title}</p>
 </div>
-
 
       <div class="cartItemSecond">
       <div class="subtotalCart"><p class="cart_price">$${item.price}</p></div>
