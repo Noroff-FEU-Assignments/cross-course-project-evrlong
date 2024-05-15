@@ -543,6 +543,19 @@ header input {
   left: 50%;
   right: 50%;
 }
+
+.countIcon {
+  position: absolute;
+  font-size: small;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #429750;
+  right: 0px;
+  bottom: 0px;
+  padding: 1px 2px 1px 3px;
+  color: white;
+}
+
 .menu__cart,
 .menu__icon {
   position: absolute;
@@ -925,6 +938,18 @@ p {
   flex-wrap: wrap;
   margin: 10px;
 }
+
+.totalContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.totalContainer h3,
+.totalContainer h2 {
+  padding: 40px 0px 10px 0px;
+  margin: 0px;
+}
 /* ------ Mobile ------ */
 
 .main__section_cart {
@@ -985,7 +1010,7 @@ p {
 .white__section {
   max-width: 80vh;
   min-width: 40%;
-  min-height: 40vh;
+  min-height: 30vh;
   padding: 20px;
   margin: 40px auto;
   display: flex;

@@ -69,3 +69,5 @@ function addToCart(game) {
     console.log(cart);
   }
 }
+
+function countItems() {}

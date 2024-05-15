@@ -3,6 +3,8 @@ let cartString = localStorage.getItem("itemsInCart");
 //declare cart variable and check if empty or not
 let cart = cartString ? JSON.parse(cartString) : [];
 
+console.log(cart);
+
 function updateCart() {
   renderCartItems();
   localStorage.setItem("itemsInCart", JSON.stringify(cart));
@@ -49,7 +51,7 @@ function renderCartItems() {
   });
 }
 
-// change number
+// change number of units
 function changenumberOfUnits(action, id) {
   cart = cart.map((item) => {
     if (item.id === id) {
@@ -67,6 +69,8 @@ function changenumberOfUnits(action, id) {
     return item;
   });
 
+  calcTotSum();
+
   function updateCart() {
     renderCartItems();
     localStorage.setItem("itemsInCart", JSON.stringify(cart));
@@ -83,6 +87,24 @@ function changenumberOfUnits(action, id) {
     updateCart();
   }
 }
+// calc total price and items
+function calcTotSum() {
+  let totalPrice = 0;
+  const eachSum = [];
+  const renderTotal = document.querySelector(".totSum");
+  cart.forEach((item) => {
+    const calcedItem = item.price * item.numberOfUnits;
+    eachSum.push(calcedItem);
+    totalPrice += calcedItem;
+    formattedPrice = totalPrice.toFixed(2);
+  });
+
+  console.log("Total Price:", totalPrice);
+  renderTotal.innerHTML = `${formattedPrice}`;
+}
+
+calcTotSum();
+
 // removes items when click remove
 function removeItemCart(id) {
   const popupCart = document.getElementById("popupCart");
@@ -94,6 +116,7 @@ function removeItemCart(id) {
     cart = cart.filter((item) => item.id !== id);
     popupCart.style.display = "none";
     updateCart();
+    calcTotSum();
   });
 
   noBtn.addEventListener("click", function () {
