@@ -9,13 +9,13 @@ function updateCart() {
   renderCartItems();
   localStorage.setItem("itemsInCart", JSON.stringify(cart));
   const emptyCart = document.querySelector(".emptyCart");
-
+  const renderTotal = document.querySelector(".totSum");
   const itemEqZero = cart.find((item) => item.numberOfUnits === 0);
   if (itemEqZero) {
     showPopup(itemEqZero.id);
   }
-
   if (cart.length === 0) {
+    renderTotal.innerHTML = `0`;
     emptyCart.style.display = "block";
   }
 }
@@ -89,21 +89,25 @@ function changenumberOfUnits(action, id) {
 }
 // calc total price and items
 function calcTotSum() {
-  let totalPrice = 0;
-  const eachSum = [];
   const renderTotal = document.querySelector(".totSum");
+
+  if (cart.length === 0) {
+    renderTotal.innerHTML = "0";
+    return;
+  }
+
+  let totalPrice = 0;
   cart.forEach((item) => {
     const calcedItem = item.price * item.numberOfUnits;
-    eachSum.push(calcedItem);
     totalPrice += calcedItem;
-    formattedPrice = totalPrice.toFixed(2);
   });
 
-  console.log("Total Price:", totalPrice);
-  renderTotal.innerHTML = `${formattedPrice}`;
+  const formattedPrice = totalPrice.toFixed(2);
+  renderTotal.innerHTML = `$${formattedPrice}`;
 }
 
 calcTotSum();
+updateCart();
 
 // removes items when click remove
 function removeItemCart(id) {

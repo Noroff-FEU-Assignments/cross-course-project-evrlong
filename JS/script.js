@@ -1,6 +1,8 @@
+import { countItems } from "./components/cartFunctions.js";
+import { addToCart } from "./components/addToCart.js";
+
 const url = "https://v2.api.noroff.dev/gamehub/";
 const contCard = document.querySelector(".container__card");
-const gameCard = document.querySelector(".game_card");
 const loader = document.querySelector(".loader");
 const errorCont = document.querySelector(".error_cont");
 let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
@@ -21,6 +23,8 @@ async function fetchUrl() {
 
 fetchUrl();
 
+countItems(cart);
+
 async function createGameCard(game) {
   try {
     const gameCardElement = document.createElement("div");
@@ -31,7 +35,6 @@ async function createGameCard(game) {
       game.title
     }"></img>
         <h3>${game.title}</h3>
-        
         ${
           game.discountedPrice === game.price
             ? `<h2 class="org_price">$${game.price}</h2>`
@@ -42,13 +45,14 @@ async function createGameCard(game) {
 
     const gameCardBtn = document.createElement("div");
     gameCardBtn.classList.add("addCartBtn");
-    gameCardBtn.innerHTML = `<div class="cartBtn" onclick="addToCart(${JSON.stringify(
-      game
-    ).replace(/"/g, "&quot;")})"> Add to cart </div>`;
+    gameCardBtn.innerHTML = `<div class="cartBtn">Add to cart</div>`;
 
     gameCardElement.appendChild(gameCardBtn);
-
     contCard.appendChild(gameCardElement);
+
+    gameCardBtn
+      .querySelector(".cartBtn")
+      .addEventListener("click", () => addToCart(game));
   } catch (error) {
     const errorMsg = errorMessage("red", error);
     errorCont.innerHTML = errorMsg;
@@ -56,18 +60,6 @@ async function createGameCard(game) {
   }
 }
 
-function addToCart(game) {
-  if (cart.some((item) => item.id === game.id)) {
-    alert("Already added");
-  } else {
-    cart.push({ ...game, numberOfUnits: 1 });
-
-    let cartString = JSON.stringify(cart);
-    console.log("testcart", cartString);
-    localStorage.setItem("itemsInCart", cartString);
-
-    console.log(cart);
-  }
+function errorMessage(color, error) {
+  return `<div style="color:${color}">${error.message}</div>`;
 }
-
-function countItems() {}
