@@ -9,7 +9,6 @@ export function addToCart(game) {
     cart.push({ ...game, numberOfUnits: 1 });
     countItems(cart);
     let cartString = JSON.stringify(cart);
-    console.log("testcart", cartString);
     localStorage.setItem("itemsInCart", cartString);
 
     console.log(cart);
