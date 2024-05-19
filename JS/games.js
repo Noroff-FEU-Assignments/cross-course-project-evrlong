@@ -1,6 +1,7 @@
 import { BASE_API_URL } from "./constants.js";
 import { countItems } from "./components/updateCartAmount.js";
 import { addToCart } from "./components/addToCart.js";
+import { countItemsMob } from "./components/updateCartAmount.js";
 
 const url = BASE_API_URL;
 const contCard = document.querySelector(".container__card");
@@ -24,6 +25,7 @@ async function fetchUrl() {
 
 fetchUrl();
 countItems(cart);
+countItemsMob(cart);
 
 async function createGameCard(game) {
   try {

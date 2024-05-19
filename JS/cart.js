@@ -1,5 +1,6 @@
 import { countItems } from "./components/updateCartAmount.js";
 import { checkTrash } from "./components/checkTrash.js";
+import { countItemsMob } from "./components/updateCartAmount.js";
 
 const table = document.querySelector(".cart_table");
 let cartString = localStorage.getItem("itemsInCart");
@@ -26,6 +27,7 @@ function updateCart() {
   }
   countItems(cart);
   checkTrash(cart);
+  countItemsMob(cart);
 }
 
 const menuCart = document.querySelector(".emptyCartItems");
