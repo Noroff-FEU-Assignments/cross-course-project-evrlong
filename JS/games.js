@@ -1,13 +1,20 @@
 import { BASE_API_URL } from "./constants.js";
 import { countItems } from "./components/updateCartAmount.js";
-import { addToCart } from "./components/addToCart.js";
 import { countItemsMob } from "./components/updateCartAmount.js";
+import { addToCart } from "./components/addToCart.js";
 
 const url = BASE_API_URL;
 const contCard = document.querySelector(".container__card");
 const loader = document.querySelector(".loader");
 const errorCont = document.querySelector(".error_cont");
 let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
+
+//must be added for countItemMob to update
+document.addEventListener("DOMContentLoaded", () => {
+  fetchUrl();
+  countItems(cart);
+  countItemsMob(cart);
+});
 
 async function fetchUrl() {
   try {
@@ -23,10 +30,6 @@ async function fetchUrl() {
   }
 }
 
-fetchUrl();
-countItems(cart);
-countItemsMob(cart);
-
 async function createGameCard(game) {
   try {
     const gameCardElement = document.createElement("div");
@@ -41,7 +44,7 @@ async function createGameCard(game) {
           game.discountedPrice === game.price
             ? `<h2 class="org_price">$${game.price}</h2>`
             : `<h2 class="old_price">$${game.price}</h2>
-             <h2 class="new_price">$${game.discountedPrice}</h2>`
+               <h2 class="new_price">$${game.discountedPrice}</h2>`
         }
       </a>`;
 
@@ -52,9 +55,12 @@ async function createGameCard(game) {
     gameCardElement.appendChild(gameCardBtn);
     contCard.appendChild(gameCardElement);
 
-    gameCardBtn
-      .querySelector(".cartBtn")
-      .addEventListener("click", () => addToCart(game));
+    gameCardBtn.querySelector(".cartBtn").addEventListener("click", () => {
+      addToCart(game);
+      cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
+      countItems(cart);
+      countItemsMob(cart);
+    });
   } catch (error) {
     const errorMsg = errorMessage("red", error);
     errorCont.innerHTML = errorMsg;

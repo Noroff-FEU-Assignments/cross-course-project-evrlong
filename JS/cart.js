@@ -56,7 +56,6 @@ menuCart.addEventListener("click", function () {
 
 updateCart();
 
-// Add new rows in cart
 function renderCartItems() {
   table.innerHTML = "";
   cart.forEach((item) => {
@@ -79,7 +78,6 @@ function renderCartItems() {
     `;
     table.appendChild(newRow);
 
-    // Add event listener for remove item button
     const removeItemCart = newRow.querySelector(".removeItemCart");
     removeItemCart.addEventListener("click", function (event) {
       const id = item.id;
@@ -89,7 +87,6 @@ function renderCartItems() {
       countItems(cart);
     });
 
-    // Add event listeners for plus and minus buttons
     const plusButton = newRow.querySelector(".unitBtn.plus");
     const minusButton = newRow.querySelector(".unitBtn.minus");
 
