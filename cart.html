@@ -39,6 +39,7 @@
     <input type="checkbox" id="search-toggle">
     <input class="searchbar" type="text" placeholder="Search for game">
     <div class="menu__cart">
+      <a href="cart.html" class="countIcon"></a>
       <a href="cart.html"><img src="IMAGES/Iconsvg-png/bag.png" alt="cart"></a>
     </div>
     <div class="menu__profile">
@@ -87,14 +88,17 @@
 
   <div class="main__section">
     <section class="white__section">
-      <h1>My cart</h1>
+      <div class="cartHeader">
+        <h1>My cart</h1>
+        <div class="emptyCartItems"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      </div>
       <a class="emptyCart"> There's nothing here</a>
       <div class="cart_table">
       </div>
     </section>
 
     <div id="popupCart" class="popupCart">
-      <p>Are you sure you want to remove item?</p>
+      <p>Are you sure you want to empty the cart?</p>
       <div class="popupChoice">
         <button class="btnCartYes">YES</button>
         <button class="btnCartNo">NO</button>
@@ -213,7 +217,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/cart.js"></script>
+  <script type="module" src="js/cart.js"></script>
   <script src="js/components/menu.js"></script>
 </body>
 

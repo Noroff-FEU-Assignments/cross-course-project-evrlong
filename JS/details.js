@@ -1,3 +1,5 @@
+import { countItems } from "./components/updateCartAmount.js";
+
 const title = document.querySelector("title");
 const queryString = document.location.search;
 const errorCont = document.querySelector(".error_cont");
@@ -7,6 +9,8 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = "https://v2.api.noroff.dev/gamehub/" + id;
 let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
+
+countItems(cart);
 
 async function fetchGame() {
   try {
@@ -66,6 +70,7 @@ function createHtml(game) {
 
       let cartString = JSON.stringify(cart);
       localStorage.setItem("itemsInCart", cartString);
+      countItems(cart);
     }
   });
 }

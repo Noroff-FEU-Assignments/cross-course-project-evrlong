@@ -1,4 +1,4 @@
-import { countItems } from "./cartFunctions.js";
+import { countItems } from "./updateCartAmount.js";
 
 let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
 
