@@ -1,3 +1,5 @@
+let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
+
 export function checkOut(cart) {
   const checkOutBtn = document.querySelector(".button_complete");
 
