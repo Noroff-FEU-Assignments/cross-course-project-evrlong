@@ -246,10 +246,11 @@ footer ul {
   height: 30px;
   border-radius: 0px 0px 10px 10px;
 }
-
-.addCartBtn:hover {
-  cursor: pointer;
-  background-color: #9583f7;
+@media (hover: hover) {
+  .addCartBtn:hover {
+    cursor: pointer;
+    background-color: #9583f7;
+  }
 }
 
 .cartBtn {
@@ -737,7 +738,7 @@ header input {
 
 .game_card h3 {
   padding: 0px;
-  margin: 20px 0px 10px 5px;
+  margin: 5px 0px 0px 5px;
 }
 
 .game_card h2 {
