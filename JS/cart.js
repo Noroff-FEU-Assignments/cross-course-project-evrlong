@@ -1,6 +1,7 @@
 import { countItems } from "./components/updateCartAmount.js";
 import { checkTrash } from "./components/checkTrash.js";
 import { countItemsMob } from "./components/updateCartAmount.js";
+import { checkOut } from "./components/checkoutBtn.js";
 
 // Declare cart variable and check if empty or not
 let cartString = localStorage.getItem("itemsInCart");
@@ -25,10 +26,14 @@ function updateCart() {
   } else {
     emptyCart.style.display = "none";
   }
+
   countItems(cart);
   checkTrash(cart);
   countItemsMob(cart);
+  checkOut();
 }
+
+checkOut(cart);
 
 const menuCart = document.querySelector(".emptyCartItems");
 menuCart.addEventListener("click", function () {

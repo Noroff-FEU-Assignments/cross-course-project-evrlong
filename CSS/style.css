@@ -331,6 +331,21 @@ footer ul {
 .cta_send:hover {
   cursor: pointer;
 }
+
+.button_complete_inactive {
+  width: fit-content;
+  margin: 30px auto 10px auto;
+  padding: 0px 10px;
+  background-color: #d1edcb;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -2px 3px 4px rgb(94, 94, 94);
+  color: #fff;
+  font-family: Roboto;
+  font-size: 25px;
+  text-align: center;
+  line-height: 70px;
+}
 .button_complete {
   width: fit-content;
   margin: 30px auto 10px auto;
