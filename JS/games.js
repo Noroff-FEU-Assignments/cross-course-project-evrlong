@@ -16,21 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   countItemsMob(cart);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".addCartBtn");
-
-  buttons.forEach((button) => {
-    button.addEventListener("touchstart", function () {
-      button.classList.add("hover");
-    });
-
-    button.addEventListener("touchend", function () {
-      button.classList.remove("hover");
-      console.log("utført");
-    });
-  });
-});
-
 async function fetchUrl() {
   try {
     const response = await fetch(url);
