@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     button.addEventListener("touchend", function () {
       button.classList.remove("hover");
+      console.log("utført");
     });
   });
 });

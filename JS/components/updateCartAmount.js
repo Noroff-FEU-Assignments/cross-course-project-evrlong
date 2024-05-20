@@ -18,7 +18,7 @@ export function countItemsMob(cart) {
   }
 
   let cartQuantity = cart.length;
-  console.log(`Updating countIconMob with cartQuantity: ${cartQuantity}`);
+  console.log(`Quantity cart: ${cartQuantity}`);
 
   if (cartQuantity === 0) {
     itemCounterMob.style.display = "none";

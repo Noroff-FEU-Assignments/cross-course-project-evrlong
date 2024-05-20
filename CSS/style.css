@@ -247,10 +247,15 @@ footer ul {
   border-radius: 0px 0px 10px 10px;
 }
 
-.addCartBtn:hover,
-.addCartBtn.hover {
+.addCartBtn:hover {
   cursor: pointer;
   background-color: #9583f7;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .addCartBtn:hover {
+    background-color: #5f9552;
+  }
 }
 
 .cartBtn {
