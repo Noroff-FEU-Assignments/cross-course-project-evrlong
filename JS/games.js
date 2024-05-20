@@ -2,7 +2,6 @@ import { BASE_API_URL } from "./constants.js";
 import { countItems } from "./components/updateCartAmount.js";
 import { countItemsMob } from "./components/updateCartAmount.js";
 import { addToCart } from "./components/addToCart.js";
-import { hoverReset } from "./components/resetTouch.js";
 
 const url = BASE_API_URL;
 const contCard = document.querySelector(".container__card");
@@ -16,7 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
   countItems(cart);
   countItemsMob(cart);
 });
-hoverReset();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".addCartBtn");
+
+  buttons.forEach((button) => {
+    button.addEventListener("touchstart", function () {
+      button.classList.add("hover");
+    });
+
+    button.addEventListener("touchend", function () {
+      button.classList.remove("hover");
+    });
+  });
+});
 
 async function fetchUrl() {
   try {
