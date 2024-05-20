@@ -1330,7 +1330,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    width: 125px;
+    width: 150px;
     min-height: fit-content;
     height: fit-content;
   }
