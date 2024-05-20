@@ -2,14 +2,14 @@ import { countItems } from "./components/updateCartAmount.js";
 import { checkTrash } from "./components/checkTrash.js";
 import { countItemsMob } from "./components/updateCartAmount.js";
 
-const table = document.querySelector(".cart_table");
-let cartString = localStorage.getItem("itemsInCart");
-
 // Declare cart variable and check if empty or not
+let cartString = localStorage.getItem("itemsInCart");
 let cart = cartString ? JSON.parse(cartString) : [];
 
+//counting items in cart
 countItems(cart);
 
+//Updates total sum, and shows text about empty cart
 function updateCart() {
   renderCartItems();
   localStorage.setItem("itemsInCart", JSON.stringify(cart));
@@ -32,7 +32,6 @@ function updateCart() {
 
 const menuCart = document.querySelector(".emptyCartItems");
 menuCart.addEventListener("click", function () {
-  console.log("clicked");
   if (cart.length === 0) {
     return;
   } else {
@@ -57,6 +56,7 @@ menuCart.addEventListener("click", function () {
 updateCart();
 
 function renderCartItems() {
+  const table = document.querySelector(".cart_table");
   table.innerHTML = "";
   cart.forEach((item) => {
     let newRow = document.createElement("div");

@@ -1,6 +1,9 @@
 export function countItems(cart) {
   const itemCounter = document.querySelector(".countIcon");
-  let cartQuantity = cart.length;
+  let cartQuantity = cart.reduce(
+    (totalUnits, currentItem) => totalUnits + currentItem.numberOfUnits,
+    0
+  );
 
   if (cartQuantity === 0) {
     itemCounter.style.display = "none";
