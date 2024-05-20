@@ -42,9 +42,9 @@ async function createGameCard(game) {
         <h3>${game.title}</h3>
         ${
           game.discountedPrice === game.price
-            ? `<h2 class="org_price">$${game.price}</h2>`
-            : `<h2 class="old_price">$${game.price}</h2>
-               <h2 class="new_price">$${game.discountedPrice}</h2>`
+            ? `<div class="discountCont"><h2 class="new_price price_gameCard">$${game.price}</h2></div>`
+            : `<div class="discountCont"><h2 class="old_price">$${game.price}</h2>
+               <h2 class="new_price">$${game.discountedPrice}</h2></div>`
         }
       </a>`;
 

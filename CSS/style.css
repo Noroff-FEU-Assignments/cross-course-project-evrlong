@@ -180,7 +180,7 @@ p {
 .old_price {
   color: #f00;
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -189,7 +189,7 @@ p {
 .org_price {
   color: #5f9552;
   font-family: Roboto;
-  font-size: 23px;
+  font-size: 15px;
   font-weight: 900;
   line-height: normal;
 }
@@ -744,6 +744,9 @@ header input {
 .game_card h3 {
   padding: 0px;
   margin: 5px 0px 0px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .game_card h2 {
@@ -754,7 +757,8 @@ header input {
 .game_card .new_price {
   color: #5f9552;
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 16px;
+  padding: 0px 5px;
   font-style: normal;
   font-weight: 700;
 }
@@ -778,6 +782,12 @@ header input {
 
 .add_cart:hover {
   background-color: #9583f7;
+}
+
+.discountCont {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
 }
 
 .game_card {
@@ -1287,8 +1297,12 @@ textarea::placeholder {
 
 @media only screen and (max-width: 432px) {
   .game_card {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
     width: 120px;
-    height: 230px;
+    min-height: fit-content;
+    height: fit-content;
   }
 
   .game_card img {
