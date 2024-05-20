@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchUrl();
   countItems(cart);
   countItemsMob(cart);
-  hoverReset();
 });
+hoverReset();
 
 async function fetchUrl() {
   try {

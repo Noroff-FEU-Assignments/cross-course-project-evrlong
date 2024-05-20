@@ -1,16 +1,16 @@
 export function hoverReset() {
-  console.log("reset loaded");
-  const buttons = document.querySelectorAll(".addCartBtn");
+  console.log("reset complete");
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".addCartBtn");
 
-  buttons.forEach((button) => {
-    button.addEventListener("touchstart", function () {
-      button.classList.add("hover");
-      console.log("touchStart");
-    });
+    buttons.forEach((button) => {
+      button.addEventListener("touchstart", function () {
+        button.classList.add("hover");
+      });
 
-    button.addEventListener("touchend", function () {
-      button.classList.remove("hover");
-      console.log("touchendt");
+      button.addEventListener("touchend", function () {
+        button.classList.remove("hover");
+      });
     });
   });
 }
