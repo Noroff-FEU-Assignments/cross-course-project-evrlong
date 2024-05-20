@@ -303,16 +303,16 @@ footer ul {
   cursor: pointer;
 }
 .button_complete {
-  width: 70%;
-  margin: 50px auto 20px auto;
-  height: 66px;
-  flex-shrink: 0;
+  width: fit-content;
+  margin: 30px auto 10px auto;
+  padding: 0px 10px;
   background-color: #5f9552;
   border: none;
+  border-radius: 5px;
   box-shadow: -2px 3px 4px rgb(94, 94, 94);
   color: #fff;
   font-family: Roboto;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   line-height: 70px;
 }
