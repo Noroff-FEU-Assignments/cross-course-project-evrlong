@@ -1382,7 +1382,7 @@ textarea::placeholder {
 
   #sidemenu {
     position: fixed;
-    background: #cbd8e2;
+    background: #99adbc;
     width: 150px;
     height: 500px;
     right: -150px;
@@ -1462,6 +1462,10 @@ textarea::placeholder {
     grid-template-columns: 1fr 1fr;
     text-align: right;
     margin-top: 50px;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #0000007e;
   }
 
   .topmenu_item_mob img {
