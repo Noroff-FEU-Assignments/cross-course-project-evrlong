@@ -99,41 +99,46 @@
     </section>
 
     <section class="form__section">
-      <h1> Contact form</h1>
-      <form id="contactForm">
+      <h1 id="contactFormHeading"> Contact form</h1>
+      <form id="contactForm" aria-labelledby="contactFormHeading">
         <div class="form__style">
-          <div class="half half_first">
-            <input name="firstname" id="firstName" placeholder="First name" />
-            <div class="errorForm" id="firstNameError">&#9940;<span class="errorMsg">Enter at least 2 letters</span>
-            </div>
+          <input name="firstname" id="firstName" placeholder="First name" aria-label="First name" aria-required="true"
+            aria-invalid="false" />
+          <div class="errorForm" id="firstNameError" role="alert">❌<span class="errorMsg">Enter at least 2
+              letters</span></div>
+        </div>
+        <div class="form__style">
+          <input name="Lastname" id="lastName" placeholder="Last name" aria-label="Last name" aria-required="true"
+            aria-invalid="false" />
+          <div class="errorForm" id="lastNameError" role="alert">❌ <span class="errorMsg">Enter at least 2
+              letters</span></div>
+        </div>
+        <div class="form__style">
+          <input name="email" id="email" placeholder="Email Address" type="email" aria-label="Email Address"
+            aria-required="true" aria-invalid="false" />
+          <div class="errorForm" id="emailError" role="alert">❌ <span class="errorMsg">Please enter valid email
+              address</span></div>
+        </div>
+        <div class="form__style">
+          <input name="Subject" id="subject" placeholder="Subject" aria-label="Subject" aria-required="true"
+            aria-invalid="false" />
+          <div class="errorForm" id="subjectError" role="alert">❌<span class="errorMsg">Enter at least 2 letters</span>
           </div>
-          <div class="half">
-            <input name="Lastname" id="lastName" placeholder="Last name" />
-            <div class="errorForm" id="lastNameError">&#9940; <span class="errorMsg">Enter at least 2 letters</span>
-            </div>
+        </div>
+        <div class="form__style">
+          <textarea id="message" name="message" rows="5" cols="40" placeholder="Text" aria-label="Message"
+            aria-required="true" aria-invalid="false"></textarea>
+          <div class="errorForm" id="textError" role="alert">❌<span class="errorMsg">Enter at least 5 letters</span>
           </div>
         </div>
-
-        <div class="form__style">
-          <input name="email" id="email" placeholder="Email Address" />
-          <div class="errorForm" id="emailError">&#9940; <span class="errorMsg">Please enter valid email address</span>
-          </div>
-        </div>
-        <div class="form__style">
-          <input name="Subject" id="subject" placeholder="Subject" />
-          <div class="errorForm" id="subjectError">&#9940;<span class="errorMsg">Enter at least 2 letters</span></div>
-        </div>
-        </div>
-        <div class="form__style">
-          <textarea id="message" name="message" rows="20" cols="40" placeholder="Text"></textarea>
-          <div class="errorForm" id="textError">&#9940;<span class="errorMsg">Enter at least 5 letters</span></div>
-        </div>
-        </div>
-        <button class="cta_send">Send</button>
-
+        <button class="cta_send" type="submit" aria-label="Send">Send</button>
       </form>
-
     </section>
+
+
+    </form>
+
+  </section>
 
   </section>
 
