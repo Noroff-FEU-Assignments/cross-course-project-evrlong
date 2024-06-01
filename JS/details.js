@@ -53,7 +53,7 @@ function createHtml(game) {
                  <h2 class="new_price">$${game.data.discountedPrice}</h2>`
           }
         </div>
-        <button id="setLocal" class="button_cart">Add to cart <i class="fa fa-plus-circle fa-1x" aria-hidden="true"></i></button>
+        <button id="setLocal" class="button_cart">Add to cart</button>
       </div>
     </div>`;
 
