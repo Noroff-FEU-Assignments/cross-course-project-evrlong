@@ -22,7 +22,10 @@
         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
       </form>
     </div>
-    <a href="index.html"><img class="logo__header" src="IMAGES/GameHub_Logo.png" alt="Logo"></a>
+    <a href="index.html">
+      <span class="visually-hidden">Home</span>
+      <img class="logo__header" src="IMAGES/GameHub_Logo.png" alt="Logo">
+    </a>
     <label for="search-toggle" class="search__icon">
       <img src="IMAGES/Iconsvg-png/search.png" alt="search for a game">
     </label>
@@ -98,16 +101,19 @@
         and Instagram for news, updates, and special offers.</p>
     </section>
 
+
     <section class="form__section">
-      <h1> Contact form</h1>
+      <h1>Contact form</h1>
       <form id="contactForm">
         <div class="form__style">
           <div class="half half_first">
+            <label for="firstName" class="visually-hidden">First Name</label>
             <input name="firstname" id="firstName" placeholder="First name" />
             <div class="errorForm" id="firstNameError">&#9940;<span class="errorMsg">Enter at least 2 letters</span>
             </div>
           </div>
           <div class="half">
+            <label for="lastName" class="visually-hidden">Last Name</label>
             <input name="Lastname" id="lastName" placeholder="Last name" />
             <div class="errorForm" id="lastNameError">&#9940; <span class="errorMsg">Enter at least 2 letters</span>
             </div>
@@ -115,24 +121,26 @@
         </div>
 
         <div class="form__style">
+          <label for="email" class="visually-hidden">Email Address</label>
           <input name="email" id="email" placeholder="Email Address" />
           <div class="errorForm" id="emailError">&#9940; <span class="errorMsg">Please enter valid email address</span>
           </div>
         </div>
+
         <div class="form__style">
+          <label for="subject" class="visually-hidden">Subject</label>
           <input name="Subject" id="subject" placeholder="Subject" />
           <div class="errorForm" id="subjectError">&#9940;<span class="errorMsg">Enter at least 2 letters</span></div>
         </div>
-        </div>
+
         <div class="form__style">
+          <label for="message" class="visually-hidden">Message</label>
           <textarea id="message" name="message" rows="20" cols="40" placeholder="Text"></textarea>
           <div class="errorForm" id="textError">&#9940;<span class="errorMsg">Enter at least 5 letters</span></div>
         </div>
-        </div>
+
         <button class="cta_send">Send</button>
-
       </form>
-
     </section>
 
   </section>
