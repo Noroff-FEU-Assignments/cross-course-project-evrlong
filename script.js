@@ -21,8 +21,8 @@ async function fetchAndDisplayProducts() {
         const productDiv = document.createElement('div');
       
         productDiv.innerHTML = `<a href="details.html?id=${product.id}" class="productCard">
-            <h2>${product.name}</h2>
           <img src="${imageSrc}"> </a>
+          <h2>${product.name}</h2>
         `;
 
         // adds class
