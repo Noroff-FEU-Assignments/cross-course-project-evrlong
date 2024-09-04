@@ -2,26 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta name="descripton"
-    content="GameHub: Your Ultimate Destination for Gaming Fun! Explore a vast world of thrilling games">
+  <meta name="descripton" content="If you want to contact Gamehub, try this page">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="CSS/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Hotjar Tracking Code for Site 4952871 (name missing) -->
-  <script>
-    (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 4952871, hjsv: 6 };
-      a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="..." crossorigin="anonymous" />
+
 </head>
 
 <body>
@@ -32,15 +22,11 @@
         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
       </form>
     </div>
-    <a href="index.html">
-      <span class="visually-hidden">Home</span>
-      <img class="logo__header" src="IMAGES/GameHub_Logo.png" alt="Logo">
-    </a>
+    <a href="index.html"><img class="logo__header" src="IMAGES/GameHub_Logo.png" alt="Logo"></a>
     <label for="search-toggle" class="search__icon">
       <img src="IMAGES/Iconsvg-png/search.png" alt="search for a game">
     </label>
     <input type="checkbox" id="search-toggle">
-    <label for="search" class="visually-hidden">Search for a game</label>
     <input type="text" id="search" name="search" placeholder="Search for game...." aria-label="Search for game">
     <div class="menu__cart">
       <a href="cart.html" class="countIcon"></a>
@@ -50,6 +36,7 @@
       <a href="profile.html"><img src="IMAGES/Iconsvg-png/Profile.png" alt="profile"></a>
     </div>
   </header>
+
 
   <div id="sidemenu">
     <div class="button-side" onclick="show_hide()">
@@ -76,7 +63,7 @@
 
   <div class="topmenu_container">
     <a href="index.html">
-      <div class="topmenu_item_active">HOME</div>
+      <div class="topmenu_item">HOME</div>
     </a>
     <a href="games.html">
       <div class="topmenu_item">GAMES</div>
@@ -85,19 +72,77 @@
       <div class="topmenu_item">ABOUT</div>
     </a>
     <a href="contact.html">
-      <div class="topmenu_last">CONTACT</div>
+      <div class="topmenu_item_active_last">CONTACT</div>
     </a>
   </div>
 
-  <container class="index_container">
 
-    <a href="games.html"><img src="IMAGES/index_img/explore_games.png" alt="Exlplore our games"
-        title="Explore our games"></a>
-    <a href="games.html"><img src="IMAGES/index_img/sale.png" alt="Sale" title="Sale"></a>
-    <a><img src="IMAGES/index_img/free_delivery.png" alt="Free Delivery" title="Free delivery"></a>
+  <section class="contact_wrapper">
+    <section class="info__section">
+      <h1 id="title">Contact us</h1>
+      <p>We're always happy to hear from our customers! If you have any questions,
+        comments, or feedback, please don't hesitate to get in touch.</p>
+      <h3>Email<i class="fa fa-at" aria-hidden="true"></i></h3>
+      <p>Support@gamehub.com</p>
+      <p>Or use the contact form in the bottom of this page </p>
+      <h3>Phone <i class="fa fa-phone" aria-hidden="true"></i></h3>
+      <p>(monday - friday 9am to 5pm)</p>
+      <p>(123) 456-7890</p>
+      <p>Location
+        123 Main St, Suite 456, Anytown, USA 12345. </p>
 
-  </container>
 
+      <h3>Location <i class="fa fa-map-marker" aria-hidden="true"></i></h3>
+      <p>123 Main St, Suite 456, Anytown, USA 12345. </p>
+      <p>You can also find us on social media! Follow us on Twitter, Facebook,
+        and Instagram for news, updates, and special offers.</p>
+    </section>
+
+    <section class="form__section">
+      <h1 id="contactFormHeading"> Contact form</h1>
+      <form id="contactForm" aria-labelledby="contactFormHeading">
+        <div class="form__style">
+          <input name="firstname" id="firstName" placeholder="First name" aria-label="First name" aria-required="true"
+            aria-invalid="false" />
+          <div class="errorForm" id="firstNameError" role="alert">&#9940;<span class="errorMsg">Enter at least 2
+              letters</span></div>
+        </div>
+        <div class="form__style">
+          <input name="Lastname" id="lastName" placeholder="Last name" aria-label="Last name" aria-required="true"
+            aria-invalid="false" />
+          <div class="errorForm" id="lastNameError" role="alert">&#9940; <span class="errorMsg">Enter at least 2
+              letters</span></div>
+        </div>
+        <div class="form__style">
+          <input name="email" id="email" placeholder="Email Address" type="email" aria-label="Email Address"
+            aria-required="true" aria-invalid="false" />
+          <div class="errorForm" id="emailError" role="alert">&#9940; <span class="errorMsg">Please enter valid email
+              address</span></div>
+        </div>
+        <div class="form__style">
+          <input name="Subject" id="subject" placeholder="Subject" aria-label="Subject" aria-required="true"
+            aria-invalid="false" />
+          <div class="errorForm" id="subjectError" role="alert">&#9940;<span class="errorMsg">Enter at least 2
+              letters</span>
+          </div>
+        </div>
+        <div class="form__style">
+          <textarea id="message" name="message" rows="5" cols="40" placeholder="Text" aria-label="Message"
+            aria-required="true" aria-invalid="false"></textarea>
+          <div class="errorForm" id="textError" role="alert">&#9940;<span class="errorMsg">Enter at least 5
+              letters</span>
+          </div>
+        </div>
+        <button class="cta_send" type="submit" aria-label="Send">Send</button>
+      </form>
+    </section>
+
+
+    </form>
+
+  </section>
+
+  </section>
 
   <div class="footer_mob">
     <div class="footer_section_mob">
@@ -135,10 +180,8 @@
       <h3>Sign up for special offers</h3>
       <div>
         <form>
-          <label for="signUp" class="visually-hidden">Enter email</label>
-          <input type="text" id="signUp" name="Enter email" placeholder="Enter email">
-          <button type="submit"><i class="fa fa-check" aria-hidden="true"></i>
-          </button>
+          <input type="text" name="Enter email" placeholder="Enter email">
+          <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
         </form>
       </div>
     </div>
@@ -148,7 +191,7 @@
 
   <nav class="menubar">
     <a class="menu_item1" href="games.html"><img src="IMAGES/Iconsvg-png/sale-menu.png" alt="sale"> </a>
-    <a class="menu_item_active" href="index.html"><img src="IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
+    <a class="menu_item2" href="index.html"><img src="IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
     <a class="menu_item3" href="cart.html">
       <img src="IMAGES/Iconsvg-png/Bag.png" alt="Bag">
       <div class="icon-overlay">
@@ -164,11 +207,9 @@
         <h3>Sign up for special offers</h3>
         <div>
           <form>
-            <label for="signUp" class="visually-hidden">Enter email</label>
-            <input type="text" id="signUp" name="Enter email" placeholder="Enter Email">
-            <button type="submit" aria-label="Submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+            <input type="text" name="Enter email" placeholder="Enter email">
+            <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
           </form>
-
         </div>
       </div>
       <div class="footer_section">
@@ -206,6 +247,7 @@
   </footer>
   <script type="module" src="JS/script.js"></script>
   <script src="js/components/menu.js"></script>
+  <script src="js/contactForm.js"></script>
 </body>
 
 </html>

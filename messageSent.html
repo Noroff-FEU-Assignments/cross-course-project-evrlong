@@ -2,16 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta name="descripton"
-    content="GameHub: Your Ultimate Destination for Gaming Fun! Explore a vast world of thrilling games">
+  <meta name="descripton" content="Your order is completed">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Success</title>
   <link rel="stylesheet" href="CSS/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Hotjar Tracking Code for Site 4952871 (name missing) -->
+  <!-- Hotjar Tracking Code for https://poetic-seahorse-e1087b.netlify.app/ -->
   <script>
     (function (h, o, t, j, a, r) {
       h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
@@ -40,8 +38,8 @@
       <img src="IMAGES/Iconsvg-png/search.png" alt="search for a game">
     </label>
     <input type="checkbox" id="search-toggle">
-    <label for="search" class="visually-hidden">Search for a game</label>
     <input type="text" id="search" name="search" placeholder="Search for game...." aria-label="Search for game">
+    <input class="searchbar" id="search" type="text" placeholder="Search for game">
     <div class="menu__cart">
       <a href="cart.html" class="countIcon"></a>
       <a href="cart.html"><img src="IMAGES/Iconsvg-png/bag.png" alt="cart"></a>
@@ -89,14 +87,22 @@
     </a>
   </div>
 
-  <container class="index_container">
 
-    <a href="games.html"><img src="IMAGES/index_img/explore_games.png" alt="Exlplore our games"
-        title="Explore our games"></a>
-    <a href="games.html"><img src="IMAGES/index_img/sale.png" alt="Sale" title="Sale"></a>
-    <a><img src="IMAGES/index_img/free_delivery.png" alt="Free Delivery" title="Free delivery"></a>
+  <section class="success__section">
 
-  </container>
+    <i class="fa-solid fa-circle-check fa-2xl"></i>
+    <h2>Message sent successfully</h2>
+    <p></p>
+    <a class="success_btn" href="index.html">
+      <div>Return home</div>
+    </a>
+
+
+
+
+
+
+  </section>
 
 
   <div class="footer_mob">
@@ -165,10 +171,9 @@
         <div>
           <form>
             <label for="signUp" class="visually-hidden">Enter email</label>
-            <input type="text" id="signUp" name="Enter email" placeholder="Enter Email">
-            <button type="submit" aria-label="Submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+            <input type="text" id="signUp" name="Enter email" placeholder="Enter 
+            <button type=" submit"><i class="fa fa-check" aria-hidden="true"></i></button>
           </form>
-
         </div>
       </div>
       <div class="footer_section">
@@ -204,7 +209,6 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="JS/script.js"></script>
   <script src="js/components/menu.js"></script>
 </body>
 

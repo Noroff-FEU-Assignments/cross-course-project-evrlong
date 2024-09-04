@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta name="descripton"
-    content="GameHub: Your Ultimate Destination for Gaming Fun! Explore a vast world of thrilling games">
+  <meta name="descripton" content="Complete your buy order here in your cart">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Cart</title>
   <link rel="stylesheet" href="CSS/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto:wght@100;400;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Hotjar Tracking Code for Site 4952871 (name missing) -->
+
+  <!-- Hotjar Tracking Code for https://poetic-seahorse-e1087b.netlify.app/ -->
   <script>
     (function (h, o, t, j, a, r) {
       h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
@@ -28,6 +28,7 @@
   <header>
     <div class="searchbox">
       <form>
+
         <input type="text" id="search" name="search" placeholder="Search for game...." aria-label="Search for game">
         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
       </form>
@@ -41,7 +42,7 @@
     </label>
     <input type="checkbox" id="search-toggle">
     <label for="search" class="visually-hidden">Search for a game</label>
-    <input type="text" id="search" name="search" placeholder="Search for game...." aria-label="Search for game">
+    <input class="searchbar" id="search" type="text" placeholder="Search for game">
     <div class="menu__cart">
       <a href="cart.html" class="countIcon"></a>
       <a href="cart.html"><img src="IMAGES/Iconsvg-png/bag.png" alt="cart"></a>
@@ -76,7 +77,7 @@
 
   <div class="topmenu_container">
     <a href="index.html">
-      <div class="topmenu_item_active">HOME</div>
+      <div class="topmenu_item">HOME</div>
     </a>
     <a href="games.html">
       <div class="topmenu_item">GAMES</div>
@@ -89,15 +90,40 @@
     </a>
   </div>
 
-  <container class="index_container">
 
-    <a href="games.html"><img src="IMAGES/index_img/explore_games.png" alt="Exlplore our games"
-        title="Explore our games"></a>
-    <a href="games.html"><img src="IMAGES/index_img/sale.png" alt="Sale" title="Sale"></a>
-    <a><img src="IMAGES/index_img/free_delivery.png" alt="Free Delivery" title="Free delivery"></a>
+  <div class="main__section">
+    <section class="white__section">
+      <div class="cartHeader">
+        <h1>My cart</h1>
+        <div class="emptyCartItems"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      </div>
+      <a class="emptyCart"> There's nothing here</a>
+      <div class="cart_table">
+      </div>
+    </section>
 
-  </container>
+    <div id="popupCart" class="popupCart">
+      <p>Are you sure you want to remove all items?</p>
+      <div class="popupChoice">
+        <button class="btnCartYes">YES</button>
+        <button class="btnCartNo">NO</button>
+      </div>
+    </div>
 
+    <div class="white__section">
+
+      <div class="totalContainer">
+
+        <h3>Total amount to pay</h3>
+        <h2 class="totSum">total</h2>
+      </div>
+
+
+
+      <div class="button_complete">Complete order</div>
+    </div>
+
+  </div>
 
   <div class="footer_mob">
     <div class="footer_section_mob">
@@ -135,10 +161,8 @@
       <h3>Sign up for special offers</h3>
       <div>
         <form>
-          <label for="signUp" class="visually-hidden">Enter email</label>
-          <input type="text" id="signUp" name="Enter email" placeholder="Enter email">
-          <button type="submit"><i class="fa fa-check" aria-hidden="true"></i>
-          </button>
+          <input type="text" name="Enter email" placeholder="Enter email">
+          <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
         </form>
       </div>
     </div>
@@ -148,8 +172,8 @@
 
   <nav class="menubar">
     <a class="menu_item1" href="games.html"><img src="IMAGES/Iconsvg-png/sale-menu.png" alt="sale"> </a>
-    <a class="menu_item_active" href="index.html"><img src="IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
-    <a class="menu_item3" href="cart.html">
+    <a class="menu_item2" href="index.html"><img src="IMAGES/Iconsvg-png/Home.png" alt="Home"></a>
+    <a class="menu_item_active" href="cart.html">
       <img src="IMAGES/Iconsvg-png/Bag.png" alt="Bag">
       <div class="icon-overlay">
         <div href="cart.html" class="countIconMob"></div>
@@ -164,11 +188,9 @@
         <h3>Sign up for special offers</h3>
         <div>
           <form>
-            <label for="signUp" class="visually-hidden">Enter email</label>
-            <input type="text" id="signUp" name="Enter email" placeholder="Enter Email">
-            <button type="submit" aria-label="Submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+            <input type="text" name="Enter email" placeholder="Enter email">
+            <button type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
           </form>
-
         </div>
       </div>
       <div class="footer_section">
@@ -204,7 +226,7 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="JS/script.js"></script>
+  <script type="module" src="js/cart.js"></script>
   <script src="js/components/menu.js"></script>
 </body>
 
