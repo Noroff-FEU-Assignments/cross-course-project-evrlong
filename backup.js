@@ -1,4 +1,5 @@
 import { countItems } from "./components/updateCartAmount.js";
+import { BASE_API_URL } from "./constants.js";
 import { API_key } from "./constants.js";
 import { API_secret } from "./constants.js";
 
@@ -8,13 +9,10 @@ const errorCont = document.querySelector(".error_cont");
 const container = document.querySelector(".gameinfo");
 const loader = document.querySelector(".loader");
 const params = new URLSearchParams(queryString);
-const API_URL = "https://evrlong.one/wp-json/wc/v3/products";
 const id = params.get("id");
-console.log("id1", id);
-const url = `${API_URL}/${id}?consumer_key=${API_key}&consumer_secret=${API_secret}`;
+const url = `${BASE_API_URL}/${id}?consumer_key=${API_key}&consumer_secret=${API_secret}`;
 let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
-console.log("url", url);
-console.log("id", id);
+console.log(url);
 
 countItems(cart);
 
@@ -34,32 +32,31 @@ async function fetchGame() {
 fetchGame();
 
 function createHtml(game) {
-  console.log(game);
-  title.innerHTML = game.name;
-  console.log(game.name);
-  console.log("img", game.images.src);
+  title.innerHTML = game.data.title;
+
   const gameInfo = document.createElement("div");
   gameInfo.classList.add("gameinfo__container");
   gameInfo.innerHTML = `
     <div class="gameinfo_img">
-        <img src="${game.images[0]?.src || "default-image-url.jpg"}" alt="${
-    game.name
-  }" title="${game.name}">
+      <img src="${game.data.image.url}" alt="${game.data.title}" title="${
+    game.data.title
+  }">
     </div>
     <div class="gameinfo_reverse">
       <section class="gameinfo_section">
-        <h2>${game.name}</h2>
-        <p>${game.description}</p>
+        <h2>${game.data.title}</h2>
+        <p>${game.data.description}</p>
       </section>
 
       <div class="gameinfo_cartsection">
-      <div class="gameinfo_price">
+        <div class="gameinfo_price">
           ${
-            game.sale_price === game.regular_price
-              ? `<h2 class="new_price">$${game.price}</h2>`
-              : `<h2 class="old_price">$${game.price}</h2>
-                 <h2 class="new_price">$${game.sale_price}</h2>`
+            game.data.discountedPrice === game.data.price
+              ? `<h2 class="new_price">$${game.data.price}</h2>`
+              : `<h2 class="old_price">$${game.data.price}</h2>
+                 <h2 class="new_price">$${game.data.discountedPrice}</h2>`
           }
+        </div>
         <button id="setLocal" class="button_cart">Add to cart</button>
       </div>
     </div>`;
@@ -67,7 +64,7 @@ function createHtml(game) {
   container.appendChild(gameInfo);
 
   document.getElementById("setLocal").addEventListener("click", function () {
-    const gameData = game;
+    const gameData = game.data;
     console.log(cart);
     if (cart.some((item) => item.id === gameData.id)) {
       console.log(gameData.numberOfUnits);

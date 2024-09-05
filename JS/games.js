@@ -9,7 +9,6 @@ const loader = document.querySelector(".loader");
 const errorCont = document.querySelector(".error_cont");
 let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
 
-//must be added for countItemMob to update
 document.addEventListener("DOMContentLoaded", () => {
   fetchUrl();
   countItems(cart);
@@ -20,33 +19,35 @@ async function fetchUrl() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const games = data.data;
-    loader.classList.remove("loader");
+    const games = data;
+    loader.style.display = "none"; // Hide loader
     games.forEach((game) => createGameCard(game));
   } catch (error) {
     const errorMsg = errorMessage("red", error);
     errorCont.innerHTML = errorMsg;
-    loader.classList.remove("loader");
+    loader.style.display = "none"; // Hide loader
   }
 }
 
-async function createGameCard(game) {
+function createGameCard(game) {
   try {
     const gameCardElement = document.createElement("div");
     gameCardElement.classList.add("game_card");
     gameCardElement.innerHTML = `
       <a href="details.html?id=${game.id}">
-        <img src="${game.image.url}" alt="${game.title}" title="${
-      game.title
-    }"></img>
-        <h3>${game.title}</h3>
+        <img src="${game.images[0]?.src || "default-image-url.jpg"}" alt="${
+      game.name
+    }" title="${game.name}"></img>
+        <h3>${game.name}</h3>
         ${
-          game.discountedPrice === game.price
+          !game.sale_price
             ? `<div class="discountCont"><h2 class="new_price price_gameCard">$${game.price}</h2></div>`
-            : `<div class="discountCont"><h2 class="old_price">$${game.price}</h2>
-               <h2 class="new_price">$${game.discountedPrice}</h2></div>`
+            : `<div class="discountCont"><h2 class="old_price">$${game.regular_price}</h2>
+               <h2 class="new_price">$${game.sale_price}</h2></div>`
         }
       </a>`;
+
+    console.log("game.id", game.id);
 
     const gameCardBtn = document.createElement("div");
     gameCardBtn.classList.add("addCartBtn");
@@ -64,10 +65,10 @@ async function createGameCard(game) {
   } catch (error) {
     const errorMsg = errorMessage("red", error);
     errorCont.innerHTML = errorMsg;
-    loader.classList.remove("loader");
   }
 }
 
 function errorMessage(color, error) {
-  return `<div style="color:${color}">${error.message}</div>`;
+  const message = error.message || "An unknown error occurred";
+  return `<div style="color:${color}">${message}</div>`;
 }

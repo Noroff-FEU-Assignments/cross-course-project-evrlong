@@ -68,8 +68,8 @@ function renderCartItems() {
     newRow.classList.add("rowCart");
     newRow.innerHTML = `
       <div class="cartItemFirst">
-        <img class="imgCart" src="${item.image.url}" alt="${item.title}">
-        <p>${item.title}</p>
+        <img class="imgCart" src="${item.images[0]?.src}" alt="${item.name}">
+        <p>${item.name}</p>
       </div>
       <div class="cartItemSecond">
         <div class="subtotalCart"><p class="cart_price">$${item.price}</p></div>
