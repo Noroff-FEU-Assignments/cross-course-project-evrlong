@@ -781,6 +781,29 @@ header input {
 
 /* ------ Games ------ */
 
+.filter_section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #aec2a9;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sortByPrice {
+  margin: 0px 15px;
+  box-shadow: 1px 1px 2px black;
+  padding: 5px;
+  background-color: #5f9552;
+  border-width: 0px;
+  color: white;
+}
+.sortByPrice:hover {
+  cursor: pointer;
+  background-color: #5f9552;
+  background: #ac9ff8fe;
+  transition: 0.35s;
+}
+
 .container__card {
   display: flex;
   flex-wrap: wrap;
@@ -789,7 +812,7 @@ header input {
 }
 
 .game_card:hover {
-  background: linear-gradient(#ac9ff8fe, #ffffff);
+  background: (#ac9ff8fe, #ffffff);
   border-width: 1px;
   box-shadow: 2px 5px 20px #9583f7;
   transition: 1s;

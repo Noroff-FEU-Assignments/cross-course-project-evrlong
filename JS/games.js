@@ -8,25 +8,61 @@ const contCard = document.querySelector(".container__card");
 const loader = document.querySelector(".loader");
 const errorCont = document.querySelector(".error_cont");
 let cart = JSON.parse(localStorage.getItem("itemsInCart")) || [];
+let games = []; //store fetched games
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchUrl();
   countItems(cart);
   countItemsMob(cart);
+  // Add event listener to the filter button
+  const categoryDropdown = document.getElementById("categoryFilter");
+  categoryDropdown.addEventListener("change", filterGamesByCategory);
+  // add listener for sort by price
+  document.getElementById("sortByPrice").addEventListener("click", () => {
+    sortByPrice();
+  });
 });
 
 async function fetchUrl() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const games = data;
-    loader.style.display = "none"; // Hide loader
-    games.forEach((game) => createGameCard(game));
+    games = data;
+    displayedGames = [...games]; // added to make default filtering possible. Empty if not
+    loader.style.display = "none";
+    displayGames(games); // Display all games (if not filtered)
   } catch (error) {
     const errorMsg = errorMessage("red", error);
     errorCont.innerHTML = errorMsg;
-    loader.style.display = "none"; // Hide loader
+    loader.style.display = "none";
   }
+}
+function displayGames(gamesToDisplay) {
+  contCard.innerHTML = ""; // clear content before display
+  gamesToDisplay.forEach((game) => createGameCard(game));
+}
+
+let displayedGames = [];
+
+function filterGamesByCategory() {
+  const selectedCategory = document.getElementById("categoryFilter").value;
+  if (selectedCategory === "all") {
+    displayedGames = [...games]; // Reset to all games
+  } else {
+    displayedGames = games.filter(
+      (game) =>
+        game.categories[0]?.name.toLowerCase() ===
+        selectedCategory.toLowerCase()
+    );
+  }
+
+  displayGames(displayedGames); // Display the filtered games
+}
+
+function sortByPrice() {
+  displayedGames.sort((a, b) => a.price - b.price); // Sort the currently displayed games by price
+
+  displayGames(displayedGames); // Update display with sorted games
 }
 
 function createGameCard(game) {
@@ -46,9 +82,6 @@ function createGameCard(game) {
                <h2 class="new_price">$${game.sale_price}</h2></div>`
         }
       </a>`;
-
-    console.log("game.id", game.id);
-
     const gameCardBtn = document.createElement("div");
     gameCardBtn.classList.add("addCartBtn");
     gameCardBtn.innerHTML = `<div class="cartBtn">Add to cart</div>`;
