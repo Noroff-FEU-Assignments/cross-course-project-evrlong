@@ -53,15 +53,15 @@ function createHtml(game) {
       </section>
 
       <div class="gameinfo_cartsection">
-      <div class="gameinfo_price">
-          ${
-            game.sale_price === game.regular_price
-              ? `<h2 class="new_price">$${game.price}</h2>`
-              : `<h2 class="old_price">$${game.price}</h2>
-                 <h2 class="new_price">$${game.sale_price}</h2>`
-          }
-        <button id="setLocal" class="button_cart">Add to cart</button>
-      </div>
+   <div class="gameinfo_price">
+  ${
+    game.sale_price === "" || game.sale_price === game.regular_price
+      ? `<h2 class="new_price">$${game.price}</h2>`
+      : `<h2 class="old_price">$${game.price}</h2>
+         <h2 class="new_price">$${game.sale_price}</h2>`
+  }
+  <button id="setLocal" class="button_cart">Add to cart</button>
+</div>
     </div>`;
 
   container.appendChild(gameInfo);
