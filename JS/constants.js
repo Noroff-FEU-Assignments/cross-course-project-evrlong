@@ -1,5 +1,5 @@
-export const API_key = "ck_373266a3ca45ad8c4527360fda8642c911277e20";
-export const API_secret = "cs_512fc3b1fa15a7862d53b4593e456a7e72c46164";
+export const API_key = "ck_e54e012119f175a0231e8014ff19709a3fae0724";
+export const API_secret = "cs_b622cc652b714cb74f6422ee1e1b4f5f1835e12c";
 
 export const BASE_API_URL = `https://evrlong.one/wp-json/wc/v3/products?consumer_key=${API_key}&consumer_secret=${API_secret}`;
 
